@@ -1,0 +1,17 @@
+.Header {
+  height: 65px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &>div {
+    flex-basis: 50%;
+  }
+
+  //  Logo
+  &__logo {
+    &_img {
+      height: 65px;
+    }
+  }
+}
