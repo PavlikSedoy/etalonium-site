@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './What.scss'
 
+import { CSSTransitionGroup } from 'react-transition-group'
+
 class What extends Component {
     state = {
-        whoItem: [
+        whoItems: [
             {
                 title: 'Blockchain',
                 icon: '',
@@ -32,10 +34,17 @@ class What extends Component {
         ]
     }
     
-    openWhatItem = () => {
-        this.setState({
-            isOpen: !this.state.whoItem.isOpen
+    openWhatItem = (e) => {
+        var { whoItems } = this.state
+        const id = e.target.id
+
+        var whoItemsR = this.state.whoItems.map((item) => {
+            item.isOpen = false
         })
+        this.setState({ whoItems, whoItemsR })
+
+        whoItems[id].isOpen = !this.state.whoItems[id].isOpen
+        this.setState({ whoItems })
     }
     
     render() {
@@ -47,20 +56,32 @@ class What extends Component {
                             <h1>Preference:</h1>
                         </div>
                         <div className="What__content">
-                            { this.state.whoItem.map((item, index) => {
-                                return (
-                                    <article className="What__item" key={index}>
-                                        <div className="What__item_header" onClick={this.openWhatItem}>
-                                            <h3 className="What__item-title">{item.title}</h3>
-                                        </div>
-                                        { item.isOpen ? (
-                                            <div className="What__item_text">
-                                                {item.text}
+                            {/*<CSSTransitionGroup*/}
+                                {/*transitionName="what"*/}
+                                {/*transitionEnterTimeOut={300}*/}
+                                {/*transitionLeaveTimeOut={300}*/}
+                            {/*>*/}
+                                { this.state.whoItems.map((whoItem, index) => {
+                                    return (
+                                        <article className="What__item">
+                                            <div className="What__item_header">
+                                                <h3 className="What__item-title" onClick={this.openWhatItem} key={index} id={index}>{whoItem.title}</h3>
                                             </div>
-                                        ) : null }
-                                    </article>
+                                            <CSSTransitionGroup
+                                                transitionName="what"
+                                                transitionEnterTimeOut={300}
+                                                transitionLeaveTimeOut={300}
+                                            >
+                                            { whoItem.isOpen ? (
+                                                <div className="What__item_text">
+                                                    {whoItem.text}
+                                                </div>
+                                            ) : null }
+                                            </CSSTransitionGroup>
+                                        </article>
+                                    )}
                                 )}
-                            )}
+                            {/*</CSSTransitionGroup>*/}
                         </div>
                     </div>
                 </div>
