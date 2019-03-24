@@ -17,7 +17,7 @@ const Header = () => {
             <div className="Header__right-side">
                 <nav className="Header__nav">
                     <NavLink
-                        to="/forwhopreloader"
+                        to="/whatpreloader"
                         className="Header__nav-link hover-bg"
                     >
                         <div className="hover-bg__bg"></div>

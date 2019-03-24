@@ -1,0 +1,50 @@
+@import "../../scss/vars";
+
+.What {
+  display: flex;
+
+  &__left-side {
+    flex-basis: 40%;
+  }
+
+  &__right-side {
+    flex-basis: 60%;
+    background-image: url('../../img/ForWho/Mask Group.jpg');
+    background-size: cover;
+  }
+
+  //  Container
+  &__container {
+    width: 450px;
+    margin: auto;
+  }
+
+  //  Title
+  &__title {
+    h1 {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 43px;
+      margin-top: 80px;
+    }
+  }
+
+  //  Item
+  &__item-title {
+    color: $color-red-etl;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  &__item_text {
+    color: rgb(92, 92, 92);
+    line-height: 1.76;
+  }
+
+  &__item_header {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -7,8 +7,8 @@ import { Route, Switch } from 'react-router-dom'
 
 //Components
 import Home from './components/Home/Home'
-import ForWhoPreloader from "./components/ForWhoPreload/ForWhoPreload";
-import ForWho from "./components/ForWho/ForWho";
+import WhatPreloader from "./components/WhatPreloader/WhatPreloader";
+import What from "./components/What/What";
 
 class App extends Component {
   render() {
@@ -16,8 +16,8 @@ class App extends Component {
       <Layout>
           <Switch>
               <Route exact path={'/'} component={Home} />
-              <Route path={'/forwhopreloader'} component={ForWhoPreloader} />
-              <Route path={'/forwho'} component={ForWho} />
+              <Route path={'/whatpreloader'} component={WhatPreloader} />
+              <Route path={'/what'} component={What} />
           </Switch>
       </Layout>
     );

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './ForWhoPreloader.scss'
+import './WhatPreloader.scss'
 
 import {Redirect} from 'react-router-dom'
 
@@ -21,7 +21,7 @@ class ForWhoPreloader extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/forwho' />
+            return <Redirect to='/what' />
         }
     }
 
