@@ -6,6 +6,8 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 .App {
@@ -39,6 +41,7 @@ html, body {
 
 //  Hovers
 .hover-bg {
+  position: relative;
   &__bg {
     position: absolute;
     height: 100%;
@@ -51,6 +54,8 @@ html, body {
   }
 
   &:hover {
+    cursor: pointer;
+
     .hover-bg__bg {
       width: 50px;
     }
