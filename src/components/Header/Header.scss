@@ -1,3 +1,5 @@
+@import "../../scss/vars";
+
 .Header {
   height: 65px;
   padding: 15px 30px;
@@ -12,6 +14,108 @@
   &__logo {
     &_img {
       height: 65px;
+    }
+  }
+
+  //  Right Side
+  &__right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  //  Nav
+  &__nav-link {
+    margin-right: 80px;
+    color: $color-black;
+    text-decoration: none;
+  }
+
+  //  Hamburger Menu
+  &__hamburger {
+    margin-left: 20px;
+  }
+}
+
+//  Hamburger Menu
+.Hamburger {
+  height: 35px;
+  width: 35px;
+  position: relative;
+
+  //  Hamburger Dotes
+  &__line {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    transition: background-color .3s ease;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      top: 0;
+      transition: background-color .3s ease;
+    }
+
+    &:before {
+      left: -15px;
+    }
+
+    &:after {
+      left: 15px;
+    }
+  }
+
+  //  Top Line
+  &__top-line {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba($color-black, .4);
+
+    &:before, &:after {
+      background-color: $color-black;
+    }
+  }
+
+  //  Center Line
+  &__center-line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-black;
+
+    &:before, &:after {
+      background-color: rgba($color-black, .4);
+    }
+  }
+
+  //  Bottom Line
+  &__bottom-line {
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    background-color: rgba($color-black, .4);
+
+    &:before, &:after {
+      background-color: $color-black;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .Hamburger__top-line, .Hamburger__bottom-line {
+      background-color: $color-red-etl;
+    }
+
+    .Hamburger__center-line {
+      &:before, &:after {
+        background-color: $color-red-etl;
+      }
     }
   }
 }

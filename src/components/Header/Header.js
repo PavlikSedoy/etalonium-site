@@ -18,7 +18,23 @@ const Header = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="Header__right-side">Right Side</div>
+                <div className="Header__right-side">
+                    <nav className="Header__nav">
+                        <NavLink
+                            to="/what"
+                            className="Header__nav-link"
+                        >What</NavLink>
+                        <NavLink
+                            to="/forwho"
+                            className="Header__nav-link"
+                        >For who</NavLink>
+                    </nav>
+                    <div className="Header__hamburger Hamburger">
+                        <div className="Hamburger__line Hamburger__top-line"></div>
+                        <div className="Hamburger__line Hamburger__center-line"></div>
+                        <div className="Hamburger__line Hamburger__bottom-line"></div>
+                    </div>
+                </div>
             </BrowserRouter>
         </header>
     )
