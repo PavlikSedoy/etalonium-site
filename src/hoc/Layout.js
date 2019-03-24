@@ -8,7 +8,7 @@ class Layout extends Component{
         return (
             <Fragment>
                 <Header/>
-                <div>{ this.props.children }</div>
+                <main>{ this.props.children }</main>
             </Fragment>
         )
     }

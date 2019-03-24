@@ -3,6 +3,9 @@
 html, body {
   font-family: $default-font, sans-serif;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -32,6 +35,26 @@ html, body {
 
 .App {
   background-color: $color-white;
+}
+
+//  Hovers
+.hover-bg {
+  &__bg {
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    background-color: $color-red-etl;
+    right: -30px;
+    top: 0;
+    z-index: 1;
+    transition: width .3s ease;
+  }
+
+  &:hover {
+    .hover-bg__bg {
+      width: 50px;
+    }
+  }
 }
 
 @keyframes App-logo-spin {

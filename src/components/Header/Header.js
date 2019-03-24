@@ -22,12 +22,18 @@ const Header = () => {
                     <nav className="Header__nav">
                         <NavLink
                             to="/what"
-                            className="Header__nav-link"
-                        >What</NavLink>
+                            className="Header__nav-link hover-bg"
+                        >
+                            <div className="hover-bg__bg"></div>
+                            <span className="Header__nav-text">What</span>
+                        </NavLink>
                         <NavLink
                             to="/forwho"
-                            className="Header__nav-link"
-                        >For who</NavLink>
+                            className="Header__nav-link hover-bg"
+                        >
+                            <div className="hover-bg__bg"></div>
+                            <span className="Header__nav-text">For who</span>
+                        </NavLink>
                     </nav>
                     <div className="Header__hamburger Hamburger">
                         <div className="Hamburger__line Hamburger__top-line"></div>
