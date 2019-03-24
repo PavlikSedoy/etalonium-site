@@ -1,0 +1,18 @@
+.Home {
+
+  //  Title
+  &__title {
+    font-size: 45px;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &_wr {
+      position: relative;
+      padding-top: 85px;
+      width: 700px;
+      margin: auto;
+    }
+  }
+}
