@@ -14,9 +14,10 @@ class ForWhoPreloader extends Component {
     }
 
     setRedirect = () => {
-        this.setState({
-            redirect: true
-        })
+        var { redirect } = this.state
+
+        redirect = true
+        this.setState({ redirect })
     }
 
     renderRedirect = () => {

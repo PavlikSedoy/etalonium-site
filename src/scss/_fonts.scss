@@ -1,5 +1,4 @@
-@import "./_mixins/font-face";
-
 //  Open Sans
-+font-face("graphik-lcg", "./fonts/GraphikLCGRegular/GraphikLCG-Regular")
-+font-face("graphik-lcg", "./fonts/GraphikLCGSemiBold/GraphikLCG-Semibold", 600)
+//@include font-face(graphik-lcg, 'fonts/GraphikLCGRegular/GraphikLCG-Regular')
+//@include font-face("graphik-lcg", "/fonts/GraphikLCGRegular/GraphikLCG-Regular")
+//@include font-face("graphik-lcg", "/fonts/GraphikLCGSemiBold/GraphikLCG-Semibold", 600)

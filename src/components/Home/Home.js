@@ -66,7 +66,7 @@ class Home extends Component {
                         <div className="Home__btn_left-side">
                             <div className="hover-bg">
                                 <div className="hover-bg__bg"></div>
-                                <span className="Home__btn_text"><img src={downloadIcon}/> Download APP</span>
+                                <span className="Home__btn_text"><img src={downloadIcon} alt="Etalonium"/> Download APP</span>
                             </div>
                         </div>
                         <div className="Home__btn_right-side">
@@ -75,11 +75,11 @@ class Home extends Component {
                                 className="hover-bg"
                             >
                                 <div className="hover-bg__bg"></div>
-                                <span className="Home__btn_text"><img src={moreInfoIcon}/> More info</span>
+                                <span className="Home__btn_text"><img src={moreInfoIcon} alt="Etalonium"/> More info</span>
                             </NavLink>
                             <div className="hover-bg">
                                 <div className="hover-bg__bg"></div>
-                                <span className="Home__btn_text"><img src={videoIcon}/> Watch video</span>
+                                <span className="Home__btn_text"><img src={videoIcon} alt="Etalonium"/> Watch video</span>
                             </div>
                         </div>
                     </div>
