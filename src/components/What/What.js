@@ -65,7 +65,7 @@ class What extends Component {
                                 return (
                                     <article className="What__item" key={index}>
                                         <div className="What__item_header">
-                                            <div className="What__item_title-img">
+                                            <div className={ whoItem.isOpen ? 'What__item_title-img active' : 'What__item_title-img' }>
                                                 {whoItem.icon}
                                             </div>
                                             <div className="What__item-title_wr">
@@ -79,7 +79,9 @@ class What extends Component {
                                         >
                                         { whoItem.isOpen ? (
                                             <div className="What__item_text">
-                                                {whoItem.text}
+                                                <div className="What__item_text-content">
+                                                    {whoItem.text}
+                                                </div>
                                             </div>
                                         ) : null }
                                         </CSSTransitionGroup>
