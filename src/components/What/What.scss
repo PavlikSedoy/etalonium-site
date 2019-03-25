@@ -55,6 +55,24 @@
         }
       }
     }
+
+    &_title-arrow {
+      margin-left: 20px;
+      transition: transform .3s ease-in-out;
+      svg {
+        path {
+          transition: fill .6s ease-in-out;
+        }
+      }
+      &.active {
+        transform: rotate(180deg);
+        svg {
+          path {
+            fill: $color-red-etl;
+          }
+        }
+      }
+    }
   }
 
   &__item-title {
