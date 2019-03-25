@@ -24,7 +24,7 @@ const Header = () => {
                         <span className="Header__nav-text">What</span>
                     </NavLink>
                     <NavLink
-                        to="/forwho"
+                        to="/whopreloader"
                         className="Header__nav-link hover-bg"
                     >
                         <div className="hover-bg__bg"></div>
