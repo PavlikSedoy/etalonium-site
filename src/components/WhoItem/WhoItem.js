@@ -7,6 +7,13 @@ class WhoItem extends Component {
                 <div className="Who__roule-name">{this.props.name}</div>
                 <img src={this.props.shadow} className="Who__shadow" alt=""/>
                 <img src={this.props.img} className="Who__img" alt=""/>
+                <div className="Who__content">
+                    <div className="Who__content_title">{this.props.oneLineName}</div>
+                    <div className="Who__content_desc">{this.props.children}</div>
+                    <div className="Who__content_more-info">
+                        <a href="/" className="Who__content_more-info_link">More info</a>
+                    </div>
+                </div>
             </article>
         );
     }

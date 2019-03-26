@@ -24,33 +24,17 @@ class Who extends Component {
         document.getElementById(item).classList.remove('active')
     }
 
-    // mouseHoverContainer = e => {
-    //     // const item = e.currentTarget.id
-    //     document.getElementById("model").classList.add('disactive')
-    //     document.getElementById("fashion-maker").classList.add('disactive')
-    //     document.getElementById("agent").classList.add('disactive')
-    //     document.getElementById("producer").classList.add('disactive')
-    // }
-    //
-    // mouseOverContainer = e => {
-    //     // const item = e.currentTarget.id
-    //     document.getElementById("model").classList.remove('disactive')
-    //     document.getElementById("fashion-maker").classList.remove('disactive')
-    //     document.getElementById("agent").classList.remove('disactive')
-    //     document.getElementById("producer").classList.remove('disactive')
-    // }
 
     render() {
         return (
             <main
                 className="Who"
                 id="who-container"
-                // onMouseEnter={this.mouseHoverContainer}
-                // onMouseLeave={this.mouseOverContainer}
             >
                 <WhoItem
                     key={0}
                     name="model"
+                    oneLineName="model"
                     classes={[
                         'model'
                     ]}
@@ -58,10 +42,16 @@ class Who extends Component {
                     shadow="../../img/who/model-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
-                />
+                >
+                    Share of transactions on mobile platforms is also
+                    growing steadily. According to “The State of
+                    Fashion 2018”, the brands more often focuses
+                    on e-commerce.
+                </WhoItem>
                 <WhoItem
                     key={1}
                     name={["fashion", <br/>, "maker"]}
+                    oneLineName="fashion maker"
                     classes={[
                         'fashion-maker'
                     ]}
@@ -69,10 +59,16 @@ class Who extends Component {
                     shadow="../../img/who/fashionmaker-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
-                />
+                >
+                    Share of transactions on mobile platforms is also
+                    growing steadily. According to “The State of
+                    Fashion 2018”, the brands more often focuses
+                    on e-commerce.
+                </WhoItem>
                 <WhoItem
                     key={2}
                     name="agent"
+                    oneLineName="agent"
                     classes={[
                         'agent'
                     ]}
@@ -80,10 +76,16 @@ class Who extends Component {
                     shadow="../../img/who/agent-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
-                />
+                >
+                    Share of transactions on mobile platforms is also
+                    growing steadily. According to “The State of
+                    Fashion 2018”, the brands more often focuses
+                    on e-commerce.
+                </WhoItem>
                 <WhoItem
                     key={3}
                     name="Producer"
+                    oneLineName="Producer"
                     classes={[
                         'producer'
                     ]}
@@ -91,7 +93,13 @@ class Who extends Component {
                     shadow="../../img/who/producer-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
-                />
+                >
+                    {"\n"} {"\n"} {"\n"}
+                    Share of transactions on mobile platforms is also
+                    growing steadily. According to “The State of
+                    Fashion 2018”, the brands more often focuses
+                    on e-commerce.
+                </WhoItem>
             </main>
         );
     }
