@@ -58,7 +58,8 @@
 
     &_title-arrow {
       margin-left: 20px;
-      transition: transform .3s ease-in-out;
+      //transition: transform .3s ease-in-out;
+      transition: transform .6s cubic-bezier(0.080, 1.090, 0.320, 1.275);
       svg {
         path {
           transition: fill .6s ease-in-out;

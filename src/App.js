@@ -10,6 +10,7 @@ import Home from './components/Home/Home'
 import WhatPreloader from "./components/WhatPreloader/WhatPreloader";
 import What from "./components/What/What";
 import WhoPreloader from "./components/WhoPreloader/WhoPreloader";
+import Who from "./components/Who/Who";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
               <Route path={'/whatpreloader'} component={WhatPreloader} />
               <Route path={'/what'} component={What} />
               <Route path={'/whopreloader'} component={WhoPreloader} />
+              <Route path={'/who'} component={Who} />
           </Switch>
       </Layout>
     );

@@ -1,0 +1,113 @@
+@import "../../scss/vars";
+
+.Who {
+  display: flex;
+
+  &__roule-name {
+    color: white;
+    font-weight: 600;
+    font-size: 36px;
+    transform: rotate(-90deg);
+    width: 320px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    position: absolute;
+    top: 147px;
+    left: -125px;
+    text-align: right;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: -140px;
+    height: 80%;
+    filter: grayscale(100%);
+    opacity: .6;
+    transition: all .3s ease-in-out;
+  }
+
+  &__shadow {
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    height: 80%;
+    opacity: .6;
+    transition: all .4s ease-in-out;
+  }
+
+  //  Item
+  &__item {
+    flex: 1 0 25%;
+    height: 100%;
+    transition: .6s ease-out;
+    position: relative;
+    overflow: hidden;
+
+    &.active.disactive {
+      flex-basis: 70%;
+      background-color: $color-red-etl;
+
+      .Who__roule-name {
+        font-size: 36px;
+        left: -125px;
+        top: 147px;
+      }
+
+      .Who__img {
+        opacity: 1;
+        filter: grayscale(0);
+        left: -65px;
+      }
+
+      .Who__shadow {
+        opacity: 1;
+        left: -100px;
+      }
+    }
+
+    //  Roule
+    &.model {
+      background-color: rgb(235, 235, 235);
+    }
+    &.fashion-maker {
+      background-color: rgb(229, 229, 229);
+
+      .Who__roule-name {
+        left: -103px;
+        top: 125px;
+      }
+    }
+    &.agent {
+      background-color: rgb(223, 223, 223);
+    }
+    &.producer {
+      background-color: rgb(213, 213, 213);
+    }
+
+
+    &.disactive {
+      flex-basis: 10%;
+      background-color: rgba($color-black, .6);
+
+      .Who__img {
+        left: -190px;
+        opacity: .3;
+      }
+
+      .Who__roule-name {
+        font-size: 21px;
+        top: 165px;
+        left: -135px;
+      }
+
+      &.fashion-maker {
+        .Who__roule-name {
+          top: 155px;
+          left: -120px;
+        }
+      }
+    }
+  }
+}

@@ -60,6 +60,7 @@ class Home extends Component {
                     }}>
                         <div className="Home__phone-img_wr">
                             <img src="./img/mockup.png" alt="Etalonium"/>
+                            <img src="./img/mockup.gif" alt="" className="Home__phone-gif"/>
                         </div>
                     </div>
                     <div className="Home__btn_wr">
