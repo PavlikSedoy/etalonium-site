@@ -33,8 +33,7 @@ class Who extends Component {
             >
                 <WhoItem
                     key={0}
-                    name="model"
-                    oneLineName="model"
+                    name="Models"
                     classes={[
                         'model'
                     ]}
@@ -43,15 +42,11 @@ class Who extends Component {
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
                 >
-                    Share of transactions on mobile platforms is also
-                    growing steadily. According to “The State of
-                    Fashion 2018”, the brands more often focuses
-                    on e-commerce.
+                    Use Etalonium for career growth, find and communicate with lead photographers, designers and agents from around the world, share your success in the news feed and inspire millions of beginner models by your example.
                 </WhoItem>
                 <WhoItem
                     key={1}
-                    name={["fashion", <br/>, "maker"]}
-                    oneLineName="fashion maker"
+                    name="Creatives"
                     classes={[
                         'fashion-maker'
                     ]}
@@ -60,15 +55,11 @@ class Who extends Component {
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
                 >
-                    Share of transactions on mobile platforms is also
-                    growing steadily. According to “The State of
-                    Fashion 2018”, the brands more often focuses
-                    on e-commerce.
+                    Your talent as a fashion designer, photographer, stylist or makeup artist will be appreciated by customers from all around the world, so follow your dream, sell your services and demonstrate your creativity to the whole world.
                 </WhoItem>
                 <WhoItem
                     key={2}
-                    name="agent"
-                    oneLineName="agent"
+                    name="Agents"
                     classes={[
                         'agent'
                     ]}
@@ -77,15 +68,11 @@ class Who extends Component {
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
                 >
-                    Share of transactions on mobile platforms is also
-                    growing steadily. According to “The State of
-                    Fashion 2018”, the brands more often focuses
-                    on e-commerce.
+                    Find beginner Models and fashion makers, become an agent who supports at the start, creates a star and gets a percentage of successful orders. Your contacts in real life, taste and experience, will help you consistently make money.
                 </WhoItem>
                 <WhoItem
                     key={3}
                     name="Producer"
-                    oneLineName="Producer"
                     classes={[
                         'producer'
                     ]}
@@ -94,11 +81,7 @@ class Who extends Component {
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
                 >
-                    {"\n"} {"\n"} {"\n"}
-                    Share of transactions on mobile platforms is also
-                    growing steadily. According to “The State of
-                    Fashion 2018”, the brands more often focuses
-                    on e-commerce.
+                    If you have a dollar - you are a Producer(you can be a producer). Support and invest in growing models, getting a percentage of completed orders and a constantly growing asset in the form of a token.
                 </WhoItem>
             </main>
         );

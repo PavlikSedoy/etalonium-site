@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import arrow from '../../img/Arrow-2.svg'
+
 class WhoItem extends Component {
     render() {
         return (
@@ -8,10 +10,22 @@ class WhoItem extends Component {
                 <img src={this.props.shadow} className="Who__shadow" alt=""/>
                 <img src={this.props.img} className="Who__img" alt=""/>
                 <div className="Who__content">
-                    <div className="Who__content_title">{this.props.oneLineName}</div>
-                    <div className="Who__content_desc">{this.props.children}</div>
-                    <div className="Who__content_more-info">
-                        <a href="/" className="Who__content_more-info_link">More info</a>
+                    <div className="Who__content_title">
+                        <div className="Who__content_title-in">
+                            {this.props.name}
+                        </div>
+                    </div>
+                    <div className="Who__content_desc">
+                        <div className="Who__content_desc-in">
+                            {this.props.children}
+                        </div>
+                    </div>
+                    <div className="Who__content_more-info hover-bg">
+                        <div className="Who__content_more-info-in">
+                            <div className="hover-bg__bg bg-white"></div>
+                            <img src={arrow} alt="" className="Who__content_more-info_img"/>
+                            <a href="/" className="Who__content_more-info_link">More info</a>
+                        </div>
                     </div>
                 </div>
             </article>

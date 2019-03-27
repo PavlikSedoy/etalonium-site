@@ -51,13 +51,10 @@
       position: absolute;
       width: 50%;
       min-width: 400px;
-      bottom: 25px;
-      right: 45px;
-      //transform: translate(0, -1000px);
-      //transition: translate .6s ease-in-out;
+      bottom: 65px;
+      right: 15px;
       height: 200px;
-      transform: translateY(-100vh);
-      transition: transform .3s ease-in-out;
+      width: 410px;
 
       &_title {
         font-size: 28px;
@@ -68,6 +65,13 @@
         text-transform: uppercase;
         position: absolute;
         top: -35px;
+        height: 33px;
+        overflow-y: hidden;
+      }
+
+      &_title-in {
+        transform: translateY(33px);
+        transition: transform .3s ease;
       }
 
       &_desc {
@@ -76,15 +80,34 @@
         line-height: 1.76;
         font-size: 16px;
         margin-top: 10px;
-        //transform: translateX(200px);
-        //transition: all .3s ease-in-out .3s;
-        //display: none;
         position: absolute;
+        height: 140px;
+        overflow-y: hidden;
+
+        &-in {
+          transform: translateY(135px);
+          transition: transform .3s ease;
+        }
       }
 
       &_more-info {
         position: absolute;
-        bottom: 35px;
+        bottom: 5px;
+        height: 30px;
+        width: 160px;
+        overflow-y: hidden;
+
+        &-in {
+          transform: translateY(26px);
+          transition: transform .3s ease;
+          width: auto;
+          display: inline-block;
+        }
+
+        &_img {
+          position: absolute;
+          top: 10px;
+        }
       }
 
       &_more-info_link {
@@ -92,7 +115,10 @@
         line-height: 1.4;
         color: $color-black;
         text-decoration: none;
-        margin-left: 20px;
+        margin-left: 30px;
+        z-index: 3;
+        display: block;
+        position: relative;
       }
     }
 
@@ -117,16 +143,24 @@
 
       //  Content in Opened Item
       .Who__content {
-        transform: translateY(0);
-        transition: transform .4s ease-in-out .2s;
 
-        &_title {
-
+        &_title-in {
+          transform: translateY(0px);
+          transition: transform .3s ease .4s;
         }
 
         &_desc {
-          //transform: translateX(0);
-          //display: block;
+          &-in {
+            transform: translateY(0);
+            transition: transform .4s ease .5s;
+          }
+        }
+
+        &_more-info {
+          &-in {
+            transform: translateY(0);
+            transition: transform .3s ease .8s;
+          }
         }
       }
     }
@@ -138,10 +172,10 @@
     &.fashion-maker {
       background-color: rgb(229, 229, 229);
 
-      .Who__roule-name {
-        left: -103px;
-        top: 125px;
-      }
+      //.Who__roule-name {
+      //  left: -103px;
+      //  top: 125px;
+      //}
     }
     &.agent {
       background-color: rgb(223, 223, 223);
@@ -164,13 +198,6 @@
         font-size: 21px;
         top: 165px;
         left: -135px;
-      }
-
-      &.fashion-maker {
-        .Who__roule-name {
-          top: 155px;
-          left: -120px;
-        }
       }
     }
   }
