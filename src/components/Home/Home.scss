@@ -9,8 +9,9 @@
 
   //  Title
   &__messenger {
-    height: 260px;
+    height: 150px;
     overflow-y: hidden;
+    margin-top: 60px;
   }
 
   &__title {
@@ -19,10 +20,11 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    margin-top: 10px;
 
     &_wr {
       position: relative;
-      padding-top: 85px;
+      //padding-top: 85px;
       width: 700px;
       margin: auto;
     }
@@ -37,10 +39,24 @@
     //overflow-y: hidden;
   }
 
-  &__phone-gif {
-    position: absolute;
-    right: -22px;
-    width: 444px;
+  &__phone {
+
+    &-gif {
+      position: absolute;
+      width: 111%;
+      right: -23px;
+    }
+
+    &-img {
+      width: 100%;
+    }
+
+    &-img_wr {
+      width: 400px;
+      position: relative;
+      bottom: 20px;
+      right: 10px;
+    }
   }
 
   //  Btns
@@ -52,7 +68,7 @@
 
     &_right-side {
       display: flex;
-      padding-right: 67px;
+      padding-right: 65px;
 
       .hover-bg:last-child {
         margin-left: 100px;

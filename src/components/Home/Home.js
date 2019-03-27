@@ -59,7 +59,7 @@ class Home extends Component {
                         transform: 'perspective(600px) rotateY(0deg) rotateX(0deg)',
                     }}>
                         <div className="Home__phone-img_wr">
-                            <img src="./img/mockup.png" alt="Etalonium"/>
+                            <img src="./img/mockup.png" alt="Etalonium" className="Home__phone-img"/>
                             <img src="./img/mockup.gif" alt="" className="Home__phone-gif"/>
                         </div>
                     </div>
