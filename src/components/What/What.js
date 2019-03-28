@@ -85,7 +85,7 @@ class What extends Component {
                                             </div>
                                         </div>
                                         {/*<CSSTransition*/}
-                                            {/*transitionName="what"*/}
+                                            {/*classNames="what"*/}
                                             {/*transitionEnterTimeout={900}*/}
                                             {/*transitionLeaveTimeout={600}*/}
                                         {/*>*/}
