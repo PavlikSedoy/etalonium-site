@@ -16,20 +16,20 @@ const Header = () => {
             </div>
             <div className="Header__right-side">
                 <nav className="Header__nav">
-                    <NavLink
-                        to="/what"
+                    <Link
+                        to="/whatpreloader"
                         className="Header__nav-link hover-bg"
                     >
                         <div className="hover-bg__bg"></div>
                         <span className="Header__nav-text">What</span>
-                    </NavLink>
-                    <NavLink
-                        to="/who"
+                    </Link>
+                    <Link
+                        to="/whopreloader"
                         className="Header__nav-link hover-bg"
                     >
                         <div className="hover-bg__bg"></div>
                         <span className="Header__nav-text">For who</span>
-                    </NavLink>
+                    </Link>
                 </nav>
                 <div className="Header__hamburger Hamburger">
                     <div className="Hamburger__line Hamburger__top-line"></div>

@@ -45,7 +45,7 @@ class Home extends Component {
 
     render() {
         return (
-            <main>
+            <main className="Home__main">
                 <div className="Home">
                     <div className="Home__messenger">
                         <Messenger news={[

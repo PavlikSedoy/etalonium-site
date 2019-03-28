@@ -10,6 +10,10 @@ html, body {
   height: 100vh;
 }
 
+main {
+  height: calc(100vh - 95px);
+}
+
 .App {
   text-align: center;
 }

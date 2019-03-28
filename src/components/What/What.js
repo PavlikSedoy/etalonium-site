@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './What.scss'
 
-import { CSSTransitionGroup } from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group'
 
 class What extends Component {
     state = {
@@ -84,11 +84,11 @@ class What extends Component {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <CSSTransitionGroup
-                                            transitionName="what"
-                                            transitionEnterTimeout={900}
-                                            transitionLeaveTimeout={600}
-                                        >
+                                        {/*<CSSTransition*/}
+                                            {/*transitionName="what"*/}
+                                            {/*transitionEnterTimeout={900}*/}
+                                            {/*transitionLeaveTimeout={600}*/}
+                                        {/*>*/}
                                         { whoItem.isOpen ? (
                                             <div className="What__item_text">
                                                 <div className="What__item_text-content">
@@ -96,7 +96,7 @@ class What extends Component {
                                                 </div>
                                             </div>
                                         ) : null }
-                                        </CSSTransitionGroup>
+                                        {/*</CSSTransition>*/}
                                     </article>
                                 )}
                             )}
