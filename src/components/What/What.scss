@@ -26,12 +26,16 @@
   //  Title
   &__title {
     margin-bottom: 35px;
+    height: 45px;
+    overflow: hidden;
 
     h1 {
       font-weight: 600;
       text-transform: uppercase;
       font-size: 43px;
       margin: 0;
+      display: block;
+      height: 45px;
     }
   }
 

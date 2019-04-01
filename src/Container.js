@@ -15,7 +15,7 @@ function Container({ location }) {
                 key={location.key}
                 // transitionEnterTimeout={5000}
                 // transitionLeaveTimeout={3000}
-                timeout={{ enter: 8000, exit: 8000 }}
+                timeout={{ enter: 5000, exit: 5000 }}
                 classNames={'fade'}
             >
                 <section className="route-section">

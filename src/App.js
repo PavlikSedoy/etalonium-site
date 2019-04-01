@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 // import Layout from './hoc/Layout'
+import './hoc/Layout.scss'
 import './App.scss';
 
 //Components

@@ -10,7 +10,7 @@ class ForWhoPreloader extends Component {
     }
 
     componentDidMount() {
-        setTimeout(this.setRedirect, 1000)
+        setTimeout(this.setRedirect, 10000)
     }
 
     setRedirect = () => {
@@ -32,23 +32,25 @@ class ForWhoPreloader extends Component {
             <main className="ForWhoPreloader">
                 {this.renderRedirect()}
                 <div className="ForWhoPreloader__title">
-                    <h1>we create Etalonium Community for</h1>
+                    <div className="ForWhoPreloader__title_anim">
+                        <h1>we create Etalonium Community for</h1>
+                    </div>
                 </div>
                 <div className="ForWhoPreloader__desc_wr">
                     <div className="ForWhoPreloader__desc_item">
-                    <span className="ForWhoPreloader__desc_item_text">
-                        finding models
-                    </span>
+                        <span className="ForWhoPreloader__desc_item_text">
+                            finding models
+                        </span>
                     </div>
                     <div className="ForWhoPreloader__desc_item">
-                    <span className="ForWhoPreloader__desc_item_text">
-                        navigate to your sucСess
-                    </span>
+                        <span className="ForWhoPreloader__desc_item_text">
+                            navigate to your sucСess
+                        </span>
                     </div>
                     <div className="ForWhoPreloader__desc_item">
-                    <span className="ForWhoPreloader__desc_item_text">
-                        promote creatives
-                    </span>
+                        <span className="ForWhoPreloader__desc_item_text">
+                            promote creatives
+                        </span>
                     </div>
                 </div>
             </main>

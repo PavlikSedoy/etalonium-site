@@ -7,11 +7,18 @@
   height: 100%;
   position: relative;
 
+  &__main {
+    width: calc( 100% - 60px );
+    transition: .5s ease-in-out .8s;
+  }
+
   //  Title
   &__messenger {
     height: 150px;
     overflow-y: hidden;
     margin-top: 60px;
+    transform: translateY(0);
+    transition: .8s ease-in-out;
   }
 
   &__title {
@@ -36,6 +43,7 @@
     left: calc(50% - 240px);
     bottom: -50px;
     height: 572px;
+    transition: bottom .8s ease-in-out .1s;
     //overflow-y: hidden;
   }
 
@@ -86,6 +94,8 @@
       justify-content: space-between;
       font-size: 22px;
       color: $color-black;
+      transform: translateY(0);
+      transition: .8s ease-in-out .2s;
     }
 
     &_text {
