@@ -9,7 +9,7 @@ class WhoPreloader extends Component {
     }
 
     componentDidMount() {
-        setTimeout(this.setRedirect, 10000)
+        setTimeout(this.setRedirect, 5000)
     }
 
     setRedirect = () => {
@@ -28,9 +28,9 @@ class WhoPreloader extends Component {
 
     render() {
         return (
-            <main className="ForWhoPreloader">
+            <main className="ForWhoPreloader who">
                 {this.renderRedirect()}
-                <div className="ForWhoPreloader__title">
+                <div className="ForWhoPreloader__title who">
                     <h1>Choose your <span className="text-red">Role</span></h1>
                 </div>
             </main>

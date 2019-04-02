@@ -61,12 +61,12 @@ main {
 
   //  WhtarPreloader Enter
   .ForWhoPreloader__title_anim {
-    transform: translateY(550px);
+    transform: translateY(50px);
     transition: transform .5s ease-in-out 1.9s;
   }
 
   .ForWhoPreloader__desc_item_text {
-    transform: translateY(550px);
+    transform: translateY(50px);
     transition: transform .5s ease-in-out 2.4s;
   }
 
@@ -84,7 +84,7 @@ main {
     }
   }
 
-  //  What Page
+  //  What Page Enter
   .What {
     width: 0;
     transition: width .5s ease-in-out 1.9s;
@@ -92,13 +92,24 @@ main {
 
   .What__title h1 {
     transform: translateY(-50px);
-    transition: transform .3s ease-in-out 2.4s;
+    transition: transform .5s ease-in-out 2.4s;
   }
 
   .What__content {
     transform: translateY(100px);
     opacity: 0;
     transition: .5s ease-in-out 2.7s;
+  }
+
+  //  WhoPreloader Enter
+  .ForWhoPreloader.who {
+    width: 0;
+    transition: .5s ease-in-out 1.9s;
+  }
+
+  .ForWhoPreloader__title.who h1 {
+    transform: translateY(50px);
+    transition: transform .5s ease-in-out 2.4s;
   }
 }
 
@@ -120,7 +131,7 @@ main {
     transform: translateY(0);
   }
 
-  //  What Page
+  //  What Page Enter
   .What {
     width: calc( 100% - 60px );
   }
@@ -132,6 +143,15 @@ main {
   .What__content {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  //  WhoPreloader Enter
+  .ForWhoPreloader.who {
+    width: calc( 100% - 60px );
+  }
+
+  .ForWhoPreloader__title.who h1 {
+    transform: translateY(0);
   }
 }
 
@@ -191,6 +211,35 @@ main {
     transition: width .5s ease-in-out 1.3s;
   }
 
+  //  What Page Exit
+  .What {
+    width: calc( 100% - 60px );
+    transition: width .5s ease-in-out 1.3s;
+  }
+
+  .What__title h1 {
+    transform: translateY(-0px);
+    transition: transform .5s ease-in-out .5s;
+  }
+
+  .What__content {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: .5s ease-in-out;
+  }
+
+  //  WhoPreloader Exit
+  .ForWhoPreloader.who {
+    width: calc( 100% - 60px );
+    transition: .5s ease-in-out .5s;
+  }
+
+  .ForWhoPreloader__title.who h1 {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform .5s ease-in-out, opacity .1s ease-in-out .5s;
+  }
+
 }
 
 .fade-exit-active {
@@ -213,6 +262,30 @@ main {
 
   .ForWhoPreloader {
     width: 0px;
+  }
+
+  //  What Page Exit
+  .What {
+    width: 0px;
+  }
+
+  .What__title h1 {
+    transform: translateY(-50px);
+  }
+
+  .What__content {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  //  WhoPreloader Exit
+  .ForWhoPreloader.who {
+    width: 0;
+  }
+
+  .ForWhoPreloader__title.who h1 {
+    transform: translateY(-50px);
+    opacity: 0;
   }
 }
 
