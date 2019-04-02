@@ -240,6 +240,30 @@ main {
     transition: transform .5s ease-in-out, opacity .1s ease-in-out .5s;
   }
 
+  //  Who Exit
+  .Who {
+    overflow: hidden;
+    width: calc( 100% - 60px );
+    transition: width .5s ease-in-out 1.3s;
+
+    .model {
+      transform: translateY(0);
+      transition: .4s ease-in-out;
+    }
+    .fashion-maker {
+      transform: translateY(0);
+      transition: .4s ease-in-out .3s;
+    }
+    .agent {
+      transform: translateY(0);
+      transition: .4s ease-in-out .6s;
+    }
+    .producer {
+      transform: translateY(0);
+      transition: .4s ease-in-out .9s;
+    }
+  }
+
 }
 
 .fade-exit-active {
@@ -286,6 +310,24 @@ main {
   .ForWhoPreloader__title.who h1 {
     transform: translateY(-50px);
     opacity: 0;
+  }
+
+  //  Who Exit
+  .Who {
+    width: 0;
+
+    .model {
+      transform: translateY(100%);
+    }
+    .fashion-maker {
+      transform: translateY(100%);
+    }
+    .agent {
+      transform: translateY(100%);
+    }
+    .producer {
+      transform: translateY(100%);
+    }
   }
 }
 

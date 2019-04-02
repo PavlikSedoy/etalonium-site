@@ -9,7 +9,7 @@ class WhoPreloader extends Component {
     }
 
     componentDidMount() {
-        setTimeout(this.setRedirect, 5000)
+        setTimeout(this.setRedirect, 4000)
     }
 
     setRedirect = () => {
