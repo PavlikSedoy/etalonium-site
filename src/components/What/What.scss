@@ -78,6 +78,21 @@
         }
       }
     }
+
+    &.active {
+      .What__item_text {
+        opacity: 1;
+        //height: 100%;
+        transition: 1s ease-in-out;
+      }
+    }
+    //&.disable {
+    //  .What__item_text {
+    //    opacity: 0;
+    //    //height: 0;
+    //    transition: 1s ease-in-out;
+    //  }
+    //}
   }
 
   &__item-title {
@@ -115,6 +130,8 @@
     font-size: 16px;
     display: flex;
     align-items: center;
+    transition: opacity .3s ease-in-out, height .3s ease-in-out;
+    opacity: 0;
 
     &__content {
       height: auto;
