@@ -5,23 +5,16 @@ import {Redirect} from 'react-router-dom'
 
 class ForWhoPreloader extends Component {
 
-    state = {
-        redirect: false
-    }
-
     componentDidMount() {
-        setTimeout(this.setRedirect, 5000)
+        setTimeout(this.setRedirect, this.props.timeOut)
     }
 
     setRedirect = () => {
-        var { redirect } = this.state
-
-        redirect = true
-        this.setState({ redirect })
+        this.props.updateRedirect()
     }
 
     renderRedirect = () => {
-        if (this.state.redirect) {
+        if (this.props.redirect) {
             return <Redirect to='/what' />
         }
     }

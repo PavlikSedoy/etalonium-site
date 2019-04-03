@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './What.scss'
 
-import { CSSTransition } from 'react-transition-group'
+// import { CSSTransition } from 'react-transition-group'
 
 class What extends Component {
     state = {

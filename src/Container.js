@@ -37,7 +37,7 @@ class Container extends Component {
                     <section className="route-section">
                         <Switch location={location}>
                             <Route exact path={'/'} component={Home} />
-                            <Route path={'/whatpreloader'} component={() => <WhatPreloader updateRedirect={this.updateWhatRedirect} /> } />
+                            <Route path={'/whatpreloader'} component={() => <WhatPreloader updateRedirect={this.updateWhatRedirect} redirect={this.state.whatRedirect} timeOut={5000} /> } />
                             <Route path={'/what'} component={What} />
                             <Route path={'/whopreloader'} component={WhoPreloader} />
                             <Route path={'/who'} component={Who} />
