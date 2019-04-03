@@ -55,8 +55,33 @@ main {
 
   main {
     width: 0;
-    transition: width .5s ease-in-out 1.4s;
+    transition: width .5s ease-in-out 1.9s;
     z-index: 5;
+  }
+
+  //  Home Page Enter
+  .Home__main {
+    width: 0px;
+    transition: .5s ease-in-out 1.9s;
+  }
+
+  .Home__title_wr {
+    transform: translateY(-150px);
+    transition: transform .5s ease-in-out 2.4s;
+  }
+
+  .Home__phone-img_wr {
+    transform: translateY(800px);
+    transition: transform .5s ease-in-out 2.7s;
+  }
+
+  .Home__btn_wr {
+    overflow: hidden;
+
+    &>div {
+      transform: translateY(65px);
+      transition: transform .5s ease-in-out 3s;
+    }
   }
 
   //  WhtarPreloader Enter
@@ -120,6 +145,27 @@ main {
 
   main {
     width: calc( 100% - 60px );
+  }
+
+  //  Home Page Enter
+  .Home__main {
+    width: calc( 100% - 60px );
+  }
+
+  .Home__title_wr {
+    transform: translateY(0);
+  }
+
+  .Home__phone-img_wr {
+    transform: translateY(0);
+  }
+
+  .Home__btn_wr {
+    overflow: hidden;
+
+    &>div {
+      transform: translateY(0);
+    }
   }
 
   //  WhtarPreloader Enter
@@ -270,7 +316,7 @@ main {
   position: absolute;
   width: 100%;
 
-  //  Home Page
+  //  Home Page Exit
   .Home__messenger {
     transform: translateY(-500px);
   }
