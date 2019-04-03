@@ -57,6 +57,7 @@ main {
     width: 0;
     transition: width .5s ease-in-out 1.9s;
     z-index: 5;
+    float: right;
   }
 
   //  Home Page Enter
@@ -87,25 +88,25 @@ main {
   //  WhtarPreloader Enter
   .ForWhoPreloader__title_anim {
     transform: translateY(50px);
-    transition: transform .5s ease-in-out 1.9s;
+    transition: transform .5s ease-in-out 2.4s;
   }
 
   .ForWhoPreloader__desc_item_text {
     transform: translateY(50px);
-    transition: transform .5s ease-in-out 2.4s;
+    transition: transform .5s ease-in-out 2.7s;
   }
 
   .ForWhoPreloader__desc_item {
     &:first-child .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out 2.4s;
-    }
-
-    &:nth-child(2n) .ForWhoPreloader__desc_item_text {
       transition: transform .5s ease-in-out 2.7s;
     }
 
-    &:last-child .ForWhoPreloader__desc_item_text {
+    &:nth-child(2n) .ForWhoPreloader__desc_item_text {
       transition: transform .5s ease-in-out 3s;
+    }
+
+    &:last-child .ForWhoPreloader__desc_item_text {
+      transition: transform .5s ease-in-out 3.3s;
     }
   }
 
@@ -231,24 +232,27 @@ main {
   //  WhtarPreloader Exit
   .ForWhoPreloader__title_anim {
     transform: translateY(0);
-    transition: .5s ease-in-out;
+    transition: .5s ease-in-out 0s, opacity 0.1s ease 1.4s;
+    opacity: 1;
   }
 
   .ForWhoPreloader__desc_item_text {
     transform: translateY(0);
+    transition: .5s ease-in-out .3s, opacity 0.1s ease 1.4s;
+    opacity: 1;
   }
 
   .ForWhoPreloader__desc_item {
     &:first-child .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out .2s;
+      transition: transform .5s ease-in-out .3s, opacity 0.1s ease 1.4s;
     }
 
     &:nth-child(2n) .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out .5s;
+      transition: transform .5s ease-in-out .6s, opacity 0.1s ease 1.4s;
     }
 
     &:last-child .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out .8s;
+      transition: transform .5s ease-in-out .9s, opacity 0.1s ease 1.4s;
     }
   }
 
@@ -277,13 +281,13 @@ main {
   //  WhoPreloader Exit
   .ForWhoPreloader.who {
     width: calc( 100% - 60px );
-    transition: .5s ease-in-out .5s;
+    transition: .5s ease-in-out 1.3s;
   }
 
   .ForWhoPreloader__title.who h1 {
     transform: translateY(0px);
     opacity: 1;
-    transition: transform .5s ease-in-out, opacity .1s ease-in-out .5s;
+    transition: transform .5s ease-in-out .8s, opacity .1s ease-in-out 1.3s;
   }
 
   //  Who Exit
@@ -323,11 +327,13 @@ main {
 
   //  WhtarPreloader Exit
   .ForWhoPreloader__title_anim {
-    transform: translateY(-550px);
+    transform: translateY(-50px);
+    opacity: 0;
   }
 
   .ForWhoPreloader__desc_item_text {
-    transform: translateY(-550px);
+    transform: translateY(-50px);
+    opacity: 0;
   }
 
   .ForWhoPreloader {
