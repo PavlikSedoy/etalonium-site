@@ -45,7 +45,7 @@ class Container extends Component {
                 text: 'The decentralized system does not allow to wind up subscribers, protects user funds, and acts as a guarantor of transactions between the fashion maker and the model. Imagine a social network in the world of fashion  without fakes and cheating!',
                 isOpen: false
             },
-        ],
+        ]
         // instaLink: 'https://www.instagram.com/etalonium/?hl=uk',
         // fbLink: 'https://www.facebook.com/etalonium/',
         // youtubeLink: 'https://www.youtube.com/channel/UCwkRIk1AcppzxZ8y0ALwuxw/featured'
@@ -76,7 +76,7 @@ class Container extends Component {
                     <section className="route-section">
                         <Switch location={location}>
                             <Route exact path={'/'} component={Home} />
-                            <Route path={'/whatpreloader'} component={() => <WhatPreloader updateRedirect={this.updateWhatRedirect} redirect={this.state.whatRedirect} timeOut={5000} /> } />
+                            <Route path={'/whatpreloader'} component={() => <WhatPreloader updateRedirect={this.updateWhatRedirect} redirect={this.state.whatRedirect} timeOut={7000} /> } />
                             <Route path={'/what'} component={() => <What whatItems={this.state.whoItems} updateItems={this.updateWhoItems} />} />
                             <Route path={'/whopreloader'} component={WhoPreloader} />
                             <Route path={'/who'} component={Who} />

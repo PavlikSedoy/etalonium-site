@@ -11,6 +11,7 @@ import homeBg from '../../img/homeBg.svg'
 import Social from "../Social/Social";
 import BgTextEtal from "../BgTextEtal/BgTextEtal";
 import Pagination from "../Pagination/Pagination";
+import Scroll from "../Scroll/Scroll";
 
 
 class Home extends Component {
@@ -53,6 +54,7 @@ class Home extends Component {
                 <Social/>
                 <BgTextEtal/>
                 <Pagination activePage={1}/>
+                <Scroll page="whatpreloader"/>
                 <div className="Home">
                     <div className="Home__messenger">
                         <Messenger news={[

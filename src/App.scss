@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-y: hidden;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -94,20 +94,20 @@ main {
 
   .ForWhoPreloader__desc_item_text {
     transform: translateY(50px);
-    transition: transform .5s ease-in-out 2.7s;
+    transition: transform .5s ease-in-out 3.8s;
   }
 
   .ForWhoPreloader__desc_item {
     &:first-child .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out 2.7s;
+      transition: transform .5s ease-in-out 3.8s;
     }
 
     &:nth-child(2n) .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out 3s;
+      transition: transform .5s ease-in-out 4.1s;
     }
 
     &:last-child .ForWhoPreloader__desc_item_text {
-      transition: transform .5s ease-in-out 3.3s;
+      transition: transform .5s ease-in-out 4.4s;
     }
   }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.scss'
 
 //Liberys
-import { Link, NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (

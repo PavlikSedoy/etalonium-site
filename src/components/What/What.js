@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './What.scss'
 import Social from "../Social/Social";
 import Pagination from "../Pagination/Pagination";
+import Scroll from "../Scroll/Scroll";
 
 // import { CSSTransition } from 'react-transition-group'
 
@@ -59,6 +60,7 @@ class What extends Component {
             <main className="What">
                 <Social/>
                 <Pagination activePage={2}/>
+                {/*<Scroll page="whopreloader"/>*/}
                 <div className="What__left-side">
                     <div className="What__container">
                         <div className="What__title">
