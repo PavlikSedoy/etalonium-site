@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import './WhatPreloader.scss'
 
 import {Redirect} from 'react-router-dom'
+import BgTextEtal from "../BgTextEtal/BgTextEtal";
 
 class ForWhoPreloader extends Component {
 
@@ -24,6 +25,7 @@ class ForWhoPreloader extends Component {
         return (
             <main className="ForWhoPreloader">
                 {this.renderRedirect()}
+                <BgTextEtal/>
                 <div className="ForWhoPreloader__title">
                     <div className="ForWhoPreloader__title_anim">
                         <h1>we create Etalonium Community for</h1>

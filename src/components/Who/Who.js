@@ -3,6 +3,7 @@ import './Who.scss'
 
 //  Components
 import WhoItem from '../WhoItem/WhoItem'
+import BgTextEtal from "../BgTextEtal/BgTextEtal";
 
 class Who extends Component {
 
@@ -31,6 +32,7 @@ class Who extends Component {
                 className="Who"
                 id="who-container"
             >
+                <BgTextEtal/>
                 <WhoItem
                     key={0}
                     name="Models"

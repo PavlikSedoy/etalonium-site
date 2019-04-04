@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import {Redirect} from 'react-router-dom'
+import BgTextEtal from "../BgTextEtal/BgTextEtal";
 
 class WhoPreloader extends Component {
 
@@ -30,6 +31,7 @@ class WhoPreloader extends Component {
         return (
             <main className="ForWhoPreloader who">
                 {this.renderRedirect()}
+                <BgTextEtal/>
                 <div className="ForWhoPreloader__title who">
                     <h1>Choose your <span className="text-red">Role</span></h1>
                 </div>

@@ -7,6 +7,9 @@ import {NavLink} from "react-router-dom";
 import videoIcon from '../../img/home-icons/video.svg'
 import moreInfoIcon from '../../img/home-icons/document.svg'
 import downloadIcon from '../../img/home-icons/download.svg'
+import homeBg from '../../img/homeBg.svg'
+import Social from "../Social/Social";
+import BgTextEtal from "../BgTextEtal/BgTextEtal";
 
 
 class Home extends Component {
@@ -46,6 +49,8 @@ class Home extends Component {
     render() {
         return (
             <main className="Home__main">
+                <Social/>
+                <BgTextEtal/>
                 <div className="Home">
                     <div className="Home__messenger">
                         <Messenger news={[

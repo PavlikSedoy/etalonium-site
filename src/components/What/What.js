@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './What.scss'
+import Social from "../Social/Social";
 
 // import { CSSTransition } from 'react-transition-group'
 
@@ -55,6 +56,7 @@ class What extends Component {
     render() {
         return (
             <main className="What">
+                <Social/>
                 <div className="What__left-side">
                     <div className="What__container">
                         <div className="What__title">

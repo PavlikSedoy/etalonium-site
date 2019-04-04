@@ -14,6 +14,7 @@ main {
   height: calc(100vh - 155px);
   background-color: $color-gray-light;
   margin: 0 30px;
+  position: relative;
 }
 
 .App {
@@ -137,6 +138,18 @@ main {
     transform: translateY(50px);
     transition: transform .5s ease-in-out 2.4s;
   }
+
+  //  Social
+  .Social {
+    opacity: 0;
+    transition: .5s ease-in-out 2.3s;
+  }
+
+  //  Etalonium BG Text
+  .BgTextEtal {
+    opacity: 0;
+    transition: .1s ease-in-out 1.9s;
+  }
 }
 
 .fade-enter-active {
@@ -199,6 +212,16 @@ main {
 
   .ForWhoPreloader__title.who h1 {
     transform: translateY(0);
+  }
+
+  //  Social
+  .Social {
+    opacity: 1;
+  }
+
+  //  Etalonium BG Text
+  .BgTextEtal {
+    opacity: 1;
   }
 }
 
@@ -314,6 +337,17 @@ main {
     }
   }
 
+  //  Social
+  .Social {
+    opacity: 1;
+    transition: .5s ease-in-out .6s;
+  }
+
+  //  Etalonium BG Text
+  .BgTextEtal {
+    opacity: 1;
+    transition: .1s ease-in-out 1.8s;
+  }
 }
 
 .fade-exit-active {
@@ -380,6 +414,16 @@ main {
     .producer {
       transform: translateY(100%);
     }
+  }
+
+  //  Social
+  .Social {
+    opacity: 0;
+  }
+
+  //  Etalonium BG Text
+  .BgTextEtal {
+    opacity: 0;
   }
 }
 
