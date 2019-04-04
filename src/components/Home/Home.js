@@ -10,6 +10,7 @@ import downloadIcon from '../../img/home-icons/download.svg'
 import homeBg from '../../img/homeBg.svg'
 import Social from "../Social/Social";
 import BgTextEtal from "../BgTextEtal/BgTextEtal";
+import Pagination from "../Pagination/Pagination";
 
 
 class Home extends Component {
@@ -51,6 +52,7 @@ class Home extends Component {
             <main className="Home__main">
                 <Social/>
                 <BgTextEtal/>
+                <Pagination activePage={1}/>
                 <div className="Home">
                     <div className="Home__messenger">
                         <Messenger news={[

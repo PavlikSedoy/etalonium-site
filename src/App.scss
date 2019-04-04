@@ -145,6 +145,12 @@ main {
     transition: .5s ease-in-out 2.3s;
   }
 
+  //  Pagination
+  .Pagination {
+    opacity: 0;
+    transition: .5s ease-in-out 2.3s;
+  }
+
   //  Etalonium BG Text
   .BgTextEtal {
     opacity: 0;
@@ -216,6 +222,11 @@ main {
 
   //  Social
   .Social {
+    opacity: 1;
+  }
+
+  //  Pagination
+  .Pagination {
     opacity: 1;
   }
 
@@ -343,6 +354,12 @@ main {
     transition: .5s ease-in-out .6s;
   }
 
+  //  Pagination
+  .Pagination {
+    opacity: 1;
+    transition: .5s ease-in-out .6s;
+  }
+
   //  Etalonium BG Text
   .BgTextEtal {
     opacity: 1;
@@ -418,6 +435,11 @@ main {
 
   //  Social
   .Social {
+    opacity: 0;
+  }
+
+  //  Pagination
+  .Pagination {
     opacity: 0;
   }
 
