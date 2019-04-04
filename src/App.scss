@@ -139,14 +139,8 @@ main {
     transition: transform .5s ease-in-out 2.4s;
   }
 
-  //  Social
-  .Social {
-    opacity: 0;
-    transition: .5s ease-in-out 2.3s;
-  }
-
-  //  Pagination
-  .Pagination {
+  //  Social && Pagination && Scroll
+  .Social, .Pagination, .scroll-button {
     opacity: 0;
     transition: .5s ease-in-out 2.3s;
   }
@@ -220,13 +214,8 @@ main {
     transform: translateY(0);
   }
 
-  //  Social
-  .Social {
-    opacity: 1;
-  }
-
-  //  Pagination
-  .Pagination {
+  //  Social && Pagination && Scroll
+  .Social, .Pagination, .scroll-button {
     opacity: 1;
   }
 
@@ -348,14 +337,8 @@ main {
     }
   }
 
-  //  Social
-  .Social {
-    opacity: 1;
-    transition: .5s ease-in-out .6s;
-  }
-
-  //  Pagination
-  .Pagination {
+  //  Social && Pagination & Scroll
+  .Social, .Pagination, .scroll-button {
     opacity: 1;
     transition: .5s ease-in-out .6s;
   }
@@ -433,13 +416,8 @@ main {
     }
   }
 
-  //  Social
-  .Social {
-    opacity: 0;
-  }
-
-  //  Pagination
-  .Pagination {
+  //  Social && Pagination && Scroll
+  .Social, .Pagination, .scroll-button {
     opacity: 0;
   }
 

@@ -12,6 +12,8 @@
 
   //  Logo
   &__logo {
+    z-index: 9;
+    position: relative;
     &_img {
       height: 65px;
     }
@@ -41,6 +43,7 @@
   //  Hamburger Menu
   &__hamburger {
     margin-left: 20px;
+    z-index: 9;
   }
 }
 
@@ -81,9 +84,11 @@
     left: 50%;
     transform: translate(-50%, 0);
     background-color: rgba($color-black, .4);
+    transition: top .3s ease-in-out .3s;
 
     &:before, &:after {
       background-color: $color-black;
+      transition: top .3s ease-in-out;
     }
   }
 
@@ -96,6 +101,7 @@
 
     &:before, &:after {
       background-color: rgba($color-black, .4);
+      transition: left .3s ease-in-out;
     }
   }
 
@@ -106,9 +112,13 @@
     bottom: 0;
     transform: translate(-50%, 0);
     background-color: rgba($color-black, .4);
+    transition: bottom .3s ease-in-out .3s;
 
     &:before, &:after {
       background-color: $color-black;
+      transition: bottom .3s ease-in-out;
+      top: auto;
+      bottom: 0;
     }
   }
 
@@ -123,6 +133,107 @@
       &:before, &:after {
         background-color: $color-red-etl;
       }
+    }
+  }
+
+  //  Active
+  &.active {
+    .Hamburger__top-line {
+      top: 15px;
+      transition: .3s ease-in-out;
+
+      &:before, &:after {
+        top: -15px;
+        transition: top .3s ease-in-out .3s;
+      }
+    }
+
+    .Hamburger__center-line {
+      &:before, &:after {
+        left: 0;
+      }
+    }
+
+    .Hamburger__bottom-line {
+      bottom: 15px;
+      transition: bottom .3s ease-in-out;
+
+      &:before, &:after {
+        bottom: -15px;
+        top: auto;
+        transition: bottom .3s ease-in-out .3s;
+      }
+    }
+  }
+}
+
+//  Menu
+.Menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-white;
+  z-index: 8;
+  top: 0;
+  left: 100vw;
+  transition: left .5s ease-in-out;
+
+  //  Container
+  &__container {
+    width: 1176px;
+    margin: 0 auto;
+    position: relative;
+    height: 470px;
+    display: flex;
+  }
+
+  //  Bg
+  &__bg {
+    height: calc(100vh - 155px);
+    background-color: $color-gray-light;
+    margin: 0 30px;
+    position: relative;
+    top: 95px;
+    left: 100vw;
+    transition: left .5s ease-in-out .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  //  Sections
+  //  First Row
+  &__first-row {
+    flex-basis: 100px;
+  }
+  &__menu-title {
+    font-size: .89rem;
+    font-family: 'graphik-lcg', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2.2px;
+    color: $color-black;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 18px;
+  }
+
+  //  Second row
+  &__second-row {
+    flex-basis: calc( 100% - 480px );
+  }
+  //  Third row
+  &__third-row {
+    flex-basis: 380px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  // Active
+  &.active {
+    left: 0;
+
+    .Menu__bg {
+      left: 0;
     }
   }
 }
