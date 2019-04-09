@@ -16,6 +16,26 @@ class Header extends Component {
         })
     }
 
+    hoverItemHandler = event => {
+        var menuItem = event.target
+
+        document.querySelectorAll('.Menu__item').forEach(
+            (item) => item.classList.add('Menu__focused-out')
+        )
+
+        menuItem.parentNode.classList.add('Menu__focused')
+    }
+
+    hoverExitItemHandler = event => {
+        var menuItem = event.target
+
+        document.querySelectorAll('.Menu__item').forEach(
+            (item) => item.classList.remove('Menu__focused-out')
+        )
+
+        menuItem.parentNode.classList.remove('Menu__focused')
+    }
+
     render() {
         return (
             <header className="Header">
@@ -54,7 +74,27 @@ class Header extends Component {
                                 <div className="Menu__first-row">
                                     <span className="Menu__menu-title">menu</span>
                                 </div>
-                                <div className="Menu__second-row">Second</div>
+                                <div className="Menu__second-row">
+                                    <nav className="Menu__nav">
+                                        <ul className="Menu__ul">
+                                            <li className="Menu__item">
+                                                <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>Home</a>
+                                                <div className="Menu__grayed">Home</div>
+                                                <div className="Menu__numbering">01</div>
+                                            </li>
+                                            <li className="Menu__item">
+                                                <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>What</a>
+                                                <div className="Menu__grayed">What</div>
+                                                <div className="Menu__numbering">02</div>
+                                            </li>
+                                            <li className="Menu__item">
+                                                <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>For who</a>
+                                                <div className="Menu__grayed">For who</div>
+                                                <div className="Menu__numbering">03</div>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
                                 <div className="Menu__third-row">Third</div>
                             </div>
                         </div>
