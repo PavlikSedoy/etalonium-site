@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 class Header extends Component {
 
     state = {
-        isOpenMenu: false
+        isOpenMenu: false,
+        isOpenForWho: false
     }
 
     clickHamburgerHandler = () => {
@@ -34,6 +35,38 @@ class Header extends Component {
         )
 
         menuItem.parentNode.classList.remove('Menu__focused')
+    }
+
+    hoverForWhoItemHandler = event => {
+        var menuItem = event.target
+
+        document.querySelectorAll('.For-who__item').forEach(
+            (item) => item.classList.add('For-who__focused-out')
+        )
+
+        menuItem.parentNode.classList.add('For-who__focused')
+    }
+
+    hoverForWhoExitItemHandler = event => {
+        var menuItem = event.target
+
+        document.querySelectorAll('.For-who__item').forEach(
+            (item) => item.classList.remove('For-who__focused-out')
+        )
+
+        menuItem.parentNode.classList.remove('For-who__focused')
+    }
+
+    clickForWhoHandler = () => {
+        this.setState({
+            isOpenForWho: !this.state.isOpenForWho
+        })
+    }
+
+    closeMenuOnHover = () => {
+        this.setState({
+            isOpenForWho: false
+        })
     }
 
     render() {
@@ -76,26 +109,54 @@ class Header extends Component {
                                 </div>
                                 <div className="Menu__second-row">
                                     <nav className="Menu__nav">
-                                        <ul className="Menu__ul">
-                                            <li className="Menu__item">
+                                        <ul className={ this.state.isOpenForWho ? "Menu__ul Menu__for-who-open" : "Menu__ul" }>
+                                            <li className="Menu__item" onMouseEnter={this.closeMenuOnHover}>
                                                 <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>Home</a>
                                                 <div className="Menu__grayed">Home</div>
                                                 <div className="Menu__numbering">01</div>
                                             </li>
-                                            <li className="Menu__item">
+                                            <li className="Menu__item" onMouseEnter={this.closeMenuOnHover}>
                                                 <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>What</a>
                                                 <div className="Menu__grayed">What</div>
                                                 <div className="Menu__numbering">02</div>
                                             </li>
                                             <li className="Menu__item">
-                                                <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>For who</a>
+                                                <span className="Menu__word" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler} onClick={this.clickForWhoHandler}>For who</span>
                                                 <div className="Menu__grayed">For who</div>
                                                 <div className="Menu__numbering">03</div>
                                             </li>
                                         </ul>
                                     </nav>
                                 </div>
-                                <div className="Menu__third-row">Third</div>
+                                <div className="Menu__third-row">
+                                    <div className={ this.state.isOpenForWho ? "Menu__for-who-menu For-who" : "Menu__for-who-menu For-who disable" }>
+                                        <ul className="For-who__ul">
+                                            <li className="For-who__item">
+                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Model</a>
+                                                <div className="For-who__grayed">Model</div>
+                                                <div className="For-who__numbering">01</div>
+                                            </li>
+                                            <li className="For-who__item">
+                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Fashion maker</a>
+                                                <div className="For-who__grayed">Fashion maker</div>
+                                                <div className="For-who__numbering">02</div>
+                                            </li>
+                                            <li className="For-who__item">
+                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Agent</a>
+                                                <div className="For-who__grayed">Agent</div>
+                                                <div className="For-who__numbering">03</div>
+                                            </li>
+                                            <li className="For-who__item">
+                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Producer</a>
+                                                <div className="For-who__grayed">Producer</div>
+                                                <div className="For-who__numbering">04</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="Menu__contacts Contacts">
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
