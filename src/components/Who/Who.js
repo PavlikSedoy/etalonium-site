@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom'
 import './Who.scss'
 
 //  Components
@@ -6,23 +7,62 @@ import WhoItem from '../WhoItem/WhoItem'
 import BgTextEtal from "../BgTextEtal/BgTextEtal";
 
 class Who extends Component {
-
-    mouseHoverItem = e => {
-        const item = e.currentTarget.id
-        document.getElementById("model").classList.add('disactive')
-        document.getElementById("fashion-maker").classList.add('disactive')
-        document.getElementById("agent").classList.add('disactive')
-        document.getElementById("producer").classList.add('disactive')
-        document.getElementById(item).classList.add('active')
+    state = {
+        redirect: false,
+        mouseWheelDirection: ''
     }
 
-    mouseOverItem = e => {
-        const item = e.currentTarget.id
+    componentDidMount() {
+        document.addEventListener('wheel', () => {
+            this.setRedirect()
+        })
+    }
+
+    wheel(e) {
+        e.preventDefault()
+
         document.getElementById("model").classList.remove('disactive')
         document.getElementById("fashion-maker").classList.remove('disactive')
         document.getElementById("agent").classList.remove('disactive')
         document.getElementById("producer").classList.remove('disactive')
-        document.getElementById(item).classList.remove('active')
+
+        var directionWheel = e.deltaY > 0 ? 'down' : 'up'
+
+        this.setState({
+            mouseWheelDirection: directionWheel
+        })
+    }
+
+    setRedirect = () => {
+        setTimeout( () => this.setState({
+            redirect: true
+        }), 500 )
+    }
+
+    renderRedirect = () => {
+        if ( this.state.redirect && this.state.mouseWheelDirection === 'up' ) return <Redirect to='/whatpreloader' />
+    }
+
+    mouseHoverItem = e => {
+        if (this.state.mouseWheelDirection === '') {
+            const item = e.currentTarget.id
+            document.getElementById("model").classList.add('disactive')
+            document.getElementById("fashion-maker").classList.add('disactive')
+            document.getElementById("agent").classList.add('disactive')
+            document.getElementById("producer").classList.add('disactive')
+            document.getElementById(item).classList.add('active')
+        } else return       
+    }
+
+    mouseOverItem = e => {
+        if (this.state.mouseWheelDirection === '') {
+            const item = e.currentTarget.id
+            document.getElementById("model").classList.remove('disactive')
+            document.getElementById("fashion-maker").classList.remove('disactive')
+            document.getElementById("agent").classList.remove('disactive')
+            document.getElementById("producer").classList.remove('disactive')
+            document.getElementById(item).classList.remove('active')
+        } else return
     }
 
 
@@ -31,7 +71,9 @@ class Who extends Component {
             <main
                 className="Who"
                 id="who-container"
+                onWheel = {(e) => this.wheel(e)}
             >
+                {this.renderRedirect()}
                 <BgTextEtal/>
                 <WhoItem
                     key={0}

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom'
 import './What.scss'
 import Social from "../Social/Social";
 import Pagination from "../Pagination/Pagination";
@@ -39,7 +40,34 @@ class What extends Component {
                 text: 'The decentralized system does not allow to wind up subscribers, protects user funds, and acts as a guarantor of transactions between the fashion maker and the model. Imagine a social network in the world of fashion  without fakes and cheating!',
                 isOpen: false
             },
-        ]
+        ],
+        redirect: false,
+        mouseWheelDirection: ''
+    }
+
+    componentDidMount() {
+        document.addEventListener('wheel', () => {
+            this.setRedirect()
+        })
+    }
+
+    wheel(e) {
+        var directionWheel = e.deltaY > 0 ? 'down' : 'up'
+
+        this.setState({
+            mouseWheelDirection: directionWheel
+        })
+    }
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+
+    renderRedirect = () => {
+        if ( this.state.redirect && this.state.mouseWheelDirection === 'down' ) return <Redirect to='/whopreloader' />
+        else if ( this.state.redirect && this.state.mouseWheelDirection === 'up' ) return <Redirect to='/' />
     }
     
     openWhatItem = (e) => {
@@ -57,7 +85,8 @@ class What extends Component {
     
     render() {
         return (
-            <main className="What">
+            <main className="What" onWheel = {(e) => this.wheel(e)}>
+                {this.renderRedirect()}
                 <Social/>
                 <Pagination activePage={2}/>
                 {/*<Scroll page="whopreloader"/>*/}
