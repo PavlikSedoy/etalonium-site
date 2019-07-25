@@ -74,7 +74,7 @@ class What extends Component {
     }
 
     renderRedirect = () => {
-        if ( this.state.redirect && this.state.mouseWheelDirection === 'down' ) return <Redirect to='/whopreloader' />
+        if ( this.state.redirect && this.state.mouseWheelDirection === 'down' ) return <Redirect to='/whopreloadermodel' />
         else if ( this.state.redirect && this.state.mouseWheelDirection === 'up' ) return <Redirect to='/model' />
     }
     
@@ -90,18 +90,18 @@ class What extends Component {
         whoItems[id].isOpen = !this.state.whoItems[id].isOpen
         this.setState({ whoItems })
 
+        // Get clicked title
         const clickedTitle = this.state.whoItems[id].title.toLowerCase().replace(/\s/g, '')
 
-        // console.log(clickedTitle)
-
+        // Get active mockup
         const currentMockup = document.getElementsByClassName('What__roule-mockup_img active')
+        // Get mockup who will be active
         const clickedMockup = document.getElementById(clickedTitle)
-
-        console.log(clickedMockup)
         
-        
+        // TimeLine init
         const tlMockup = new TimelineMax({})
 
+        // Mockup fadeOut and fadeIn
         tlMockup
             .to(currentMockup, .25, {opacity: 0})
             .to(currentMockup, 0, {display: 'none'})
