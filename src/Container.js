@@ -8,6 +8,9 @@ import What from "./components/What/What";
 import WhoPreloader from "./components/WhoPreloader/WhoPreloader";
 import Who from "./components/Who/Who";
 
+// Models Page
+import ModelHome from './components/ModelHome/ModelHome'
+
 
 class Container extends Component {
 
@@ -80,6 +83,7 @@ class Container extends Component {
                             <Route path={'/what'} component={() => <What whatItems={this.state.whoItems} updateItems={this.updateWhoItems} />} />
                             <Route path={'/whopreloader'} component={WhoPreloader} />
                             <Route path={'/who'} component={Who} />
+                            <Route path={'/model'} component={ModelHome} />
                         </Switch>
                     </section>
                 </CSSTransition>

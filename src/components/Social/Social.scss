@@ -32,4 +32,26 @@
       }
     }
   }
+
+  &__white-item_wr {
+    margin-top: 25px;
+
+    a svg path {
+      fill: $color-white;
+      transition: fill .3s ease-in-out;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    a {
+      &:hover {
+        cursor: pointer;
+        svg path {
+          fill: $color-red-etl;
+        }
+      }
+    }
+  }
 }
