@@ -32,6 +32,10 @@
   letter-spacing: 3.2px;
 }
 
+.scroll-button.white span {
+  color: $color-white;
+}
+
 .line-container {
   width: 1px;
   height: 100px;
@@ -48,6 +52,10 @@
   position: absolute;
   background-color: $color-black;
   animation: line-animation 1.5s ease-in-out 0s infinite normal;
+}
+
+.line.white {
+  background-color: $color-white;
 }
 
 @keyframes line-animation {

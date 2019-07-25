@@ -7,6 +7,8 @@ import WhatPreloader from "./components/WhatPreloader/WhatPreloader";
 import What from "./components/What/What";
 import WhoPreloader from "./components/WhoPreloader/WhoPreloader";
 import Who from "./components/Who/Who";
+import WhatPreloaderModel from './components/WhatPreloaderModel/WhatPreloaderModel'
+import WhatModel from './components/WhatModel/WhatModel'
 
 // Models Page
 import ModelHome from './components/ModelHome/ModelHome'
@@ -16,6 +18,7 @@ class Container extends Component {
 
     state = {
         whatRedirect: false,
+        whatModelRedirect: false,
         whoRedirect: false,
         whoItems: [
             {
@@ -64,6 +67,12 @@ class Container extends Component {
         this.setState({ ...this.state, whoItems: val })
     }
 
+    updateWhatModelRedirect = () => {
+        this.setState({
+            whatModelRedirect: !this.state.whatModelRedirect
+        })
+    }
+
     render() {
         const { location } = this.props
 
@@ -84,6 +93,8 @@ class Container extends Component {
                             <Route path={'/whopreloader'} component={WhoPreloader} />
                             <Route path={'/who'} component={Who} />
                             <Route path={'/model'} component={ModelHome} />
+                            <Route path={'/whatpreloadermodel'} component={() => <WhatPreloaderModel updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
+                            <Route path={'/whatmodel'} component={WhatModel} />
                         </Switch>
                     </section>
                 </CSSTransition>

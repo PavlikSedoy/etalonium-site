@@ -69,12 +69,22 @@ class Header extends Component {
         })
     }
 
+    closeMenuOnClickLink = () => {
+        this.setState({
+            isOpenMenu: false
+        })
+    }
+
     render() {
         return (
             <header className="Header">
                 <div className="Header__left-side">
                     <div className="Header__logo">
-                        <Link to="/" className="Header__logo_link">
+                        <Link
+                            to="/"
+                            className="Header__logo_link"
+                            onClick={this.closeMenuOnClickLink}
+                        >
                             <img className="Header__logo_img" src="../../logo.svg" alt="Etalonium"/>
                         </Link>
                     </div>
@@ -84,6 +94,7 @@ class Header extends Component {
                         <Link
                             to="/whatpreloader"
                             className="Header__nav-link hover-bg"
+                            onClick={this.closeMenuOnClickLink}
                         >
                             <div className="hover-bg__bg"></div>
                             <span className="Header__nav-text">About</span>
@@ -91,6 +102,7 @@ class Header extends Component {
                         <Link
                             to="/whopreloader"
                             className="Header__nav-link hover-bg"
+                            onClick={this.closeMenuOnClickLink}
                         >
                             <div className="hover-bg__bg"></div>
                             <span className="Header__nav-text">For who</span>
@@ -111,17 +123,40 @@ class Header extends Component {
                                     <nav className="Menu__nav">
                                         <ul className={ this.state.isOpenForWho ? "Menu__ul Menu__for-who-open" : "Menu__ul" }>
                                             <li className="Menu__item" onMouseEnter={this.closeMenuOnHover}>
-                                                <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>Home</a>
+                                                <Link
+                                                    to='/'
+                                                    className="Menu__word" 
+                                                    onMouseEnter={this.hoverItemHandler}
+                                                    onMouseLeave={this.hoverExitItemHandler}
+                                                    onClick={this.closeMenuOnClickLink}
+                                                >
+                                                    Home
+                                                </Link>
                                                 <div className="Menu__grayed">Home</div>
                                                 <div className="Menu__numbering">01</div>
                                             </li>
                                             <li className="Menu__item" onMouseEnter={this.closeMenuOnHover}>
-                                                <a className="Menu__word" href="/" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler}>What</a>
+                                                <Link
+                                                    to='/whatpreloader'
+                                                    className="Menu__word"
+                                                    onMouseEnter={this.hoverItemHandler}
+                                                    onMouseLeave={this.hoverExitItemHandler}
+                                                    onClick={this.closeMenuOnClickLink}
+                                                >
+                                                    What
+                                                </Link>
                                                 <div className="Menu__grayed">What</div>
                                                 <div className="Menu__numbering">02</div>
                                             </li>
                                             <li className="Menu__item">
-                                                <span className="Menu__word" onMouseEnter={this.hoverItemHandler} onMouseLeave={this.hoverExitItemHandler} onClick={this.clickForWhoHandler}>For who</span>
+                                                <span
+                                                    className="Menu__word"
+                                                    onMouseEnter={this.hoverItemHandler}
+                                                    onMouseLeave={this.hoverExitItemHandler}
+                                                    onClick={this.clickForWhoHandler}
+                                                >
+                                                    For who
+                                                </span>
                                                 <div className="Menu__grayed">For who</div>
                                                 <div className="Menu__numbering">03</div>
                                             </li>
@@ -132,7 +167,15 @@ class Header extends Component {
                                     <div className={ this.state.isOpenForWho ? "Menu__for-who-menu For-who" : "Menu__for-who-menu For-who disable" }>
                                         <ul className="For-who__ul">
                                             <li className="For-who__item">
-                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Model</a>
+                                                <Link
+                                                    to='/model'
+                                                    className="For-who__word"
+                                                    onMouseEnter={this.hoverForWhoItemHandler}
+                                                    onMouseLeave={this.hoverForWhoExitItemHandler}
+                                                    onClick={this.closeMenuOnClickLink}
+                                                >
+                                                    Model
+                                                </Link>
                                                 <div className="For-who__grayed">Model</div>
                                                 <div className="For-who__numbering">01</div>
                                             </li>

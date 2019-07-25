@@ -36,7 +36,7 @@ class Home extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect && this.state.mouseWheelDirection === 'down') {
-            return <Redirect to='/whatpreloader' />
+            return <Redirect to='/whatpreloadermodel' />
         }
     }
 
@@ -47,18 +47,9 @@ class Home extends Component {
                 {this.renderRedirect()}
                 <Social white={true} />
                 <Pagination activePage={1} white={true} page={'model'} />
-                <Scroll page="whatpreloader"/>
-                <div className="Home">
-                    <div className="Home__messenger">
-                        Title
-                    </div>
-                    <div className="Home__btn_wr">
-                        <div className="Home__btn_left-side">
-                            <div className="hover-bg">
-                                <div className="hover-bg__bg"></div>
-                            </div>
-                        </div>
-                    </div>
+                <Scroll page="whatpreloadermodel" white={true} />
+                <div className="Home HomeRoules">
+                    <h1 className="HomeRoules__title">Start your  way to success</h1>
                 </div>
             </main>
         )
