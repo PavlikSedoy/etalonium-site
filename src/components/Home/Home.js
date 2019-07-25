@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './Home.scss'
 
 import Messenger from '../Messenger/Messenger'
-import {NavLink} from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 
 import videoIcon from '../../img/home-icons/video.svg'
 import moreInfoIcon from '../../img/home-icons/document.svg'
@@ -15,9 +15,37 @@ import Scroll from "../Scroll/Scroll";
 
 
 class Home extends Component {
+    state = {
+        redirect: false,
+        mouseWheelDirection: ''
+    }
 
     componentDidMount() {
         this.phoneTilte(document, window)
+
+        document.addEventListener('wheel', () => {
+            this.setRedirect()
+        })
+    }
+
+    wheel(e) {
+        var directionWheel = e.deltaY > 0 ? 'down' : 'up'
+
+        this.setState({
+            mouseWheelDirection: directionWheel
+        })
+    }
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+
+    renderRedirect = () => {
+        if (this.state.redirect && this.state.mouseWheelDirection === 'down') {
+            return <Redirect to='/whatpreloader' />
+        }
     }
 
     phoneTilte = ($doc, $win) => {
@@ -50,7 +78,8 @@ class Home extends Component {
 
     render() {
         return (
-            <main className="Home__main">
+            <main className="Home__main" onWheel = {(e) => this.wheel(e)}>
+                {this.renderRedirect()}
                 <Social/>
                 <BgTextEtal/>
                 <Pagination activePage={1}/>
