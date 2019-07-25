@@ -16,9 +16,25 @@
     background-size: cover;
   }
 
+  // Sides for Roule pages
+  &__left-side-roules {
+    flex-basis: 70%;
+
+    & .What__container {
+      max-width: 760px;
+      margin-left: 115px;
+    }
+  }
+
+  &__right-side-roules {
+    background: none;
+    display: flex;
+    align-items: center;
+  }
+
   //  Container
   &__container {
-    width: 480px;
+    max-width: 480px;
     margin: auto;
     height: 455px;
   }
@@ -150,6 +166,17 @@
   &__item_header {
     display: flex;
     align-items: center;
+  }
+
+  &__roule-mockup {
+    &_img {
+      max-height: 720px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
   }
 
   .what-enter {

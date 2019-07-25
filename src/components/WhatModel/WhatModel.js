@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom'
+import { TimelineMax } from 'gsap'
+
 import './WhatModel.scss'
 import Social from "../Social/Social";
 import Pagination from "../Pagination/Pagination";
 import Scroll from "../Scroll/Scroll";
+
+import profileMockup from '../../img/roule-mockups/mod_profile.png'
+import calendarMockup from '../../img/roule-mockups/mod_my_calendar.png'
+import feedMockup from '../../img/roule-mockups/mod_feed.png'
+import findMockup from '../../img/roule-mockups/prod_search.png'
+import eventsMockup from '../../img/roule-mockups/mod_calend.png'
 
 // import { CSSTransition } from 'react-transition-group'
 
@@ -67,7 +75,7 @@ class What extends Component {
 
     renderRedirect = () => {
         if ( this.state.redirect && this.state.mouseWheelDirection === 'down' ) return <Redirect to='/whopreloader' />
-        else if ( this.state.redirect && this.state.mouseWheelDirection === 'up' ) return <Redirect to='/' />
+        else if ( this.state.redirect && this.state.mouseWheelDirection === 'up' ) return <Redirect to='/model' />
     }
     
     openWhatItem = (e) => {
@@ -81,6 +89,26 @@ class What extends Component {
 
         whoItems[id].isOpen = !this.state.whoItems[id].isOpen
         this.setState({ whoItems })
+
+        const clickedTitle = this.state.whoItems[id].title.toLowerCase().replace(/\s/g, '')
+
+        // console.log(clickedTitle)
+
+        const currentMockup = document.getElementsByClassName('What__roule-mockup_img active')
+        const clickedMockup = document.getElementById(clickedTitle)
+
+        console.log(clickedMockup)
+        
+        
+        const tlMockup = new TimelineMax({})
+
+        tlMockup
+            .to(currentMockup, .25, {opacity: 0})
+            .to(currentMockup, 0, {display: 'none'})
+            .to(clickedMockup, 0, {display: 'block', opacity: 0})
+            .to(clickedMockup, .25, {opacity: 1})
+            .set(clickedMockup, {className: "+=active"})
+
     }
     
     render() {
@@ -90,11 +118,8 @@ class What extends Component {
                 <Social/>
                 <Pagination activePage={2}/>
                 <Scroll page="whopreloadermodel"/>
-                <div className="What__left-side">
+                <div className="What__left-side What__left-side-roules">
                     <div className="What__container">
-                        <div className="What__title">
-                            <h1>Preference:</h1>
-                        </div>
                         <div className="What__content">
                             { this.state.whoItems.map((whoItem, index) => {
                                 return (
@@ -136,7 +161,43 @@ class What extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="What__right-side"></div>
+                <div className="What__right-side What__right-side-roules">
+                    <div className="What__roule-mockups">
+                        {/* Mockup Item */}
+                        <div className="What__roule-mockup">
+                            <img
+                                src={profileMockup}
+                                alt="Your profile"
+                                id="yourprofile"
+                                className="What__roule-mockup_img active"
+                            />
+                            <img
+                                src={calendarMockup}
+                                alt="Your calendar"
+                                id="yourcalendar"
+                                className="What__roule-mockup_img"
+                            />
+                            <img
+                                src={feedMockup}
+                                alt="Worldwide feed"
+                                id="worldwidefeed"
+                                className="What__roule-mockup_img"
+                            />
+                            <img
+                                src={findMockup}
+                                alt="Find"
+                                id="find"
+                                className="What__roule-mockup_img"
+                            />
+                            <img
+                                src={eventsMockup}
+                                alt="Events"
+                                id="events"
+                                className="What__roule-mockup_img"
+                            />
+                        </div>
+                    </div>
+                </div>
             </main>
         );
     }
