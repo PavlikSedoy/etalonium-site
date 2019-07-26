@@ -18,6 +18,9 @@ import CreativeHome from './components/CreativeHome/CreativelHome'
 import WhatPreloaderCreative from './components/WhatPreloaderCreative/WhatPreloaderCreative'
 import WhatCreative from './components/WhatCreative/WhatCreative'
 
+// Agent Pages
+import AgentHome from './components/AgentHome/AgentHome'
+
 
 class Container extends Component {
 
@@ -110,6 +113,7 @@ class Container extends Component {
                             <Route path={'/creative'} component={CreativeHome} />
                             <Route path={'/whatpreloadercreative'} component={() => <WhatPreloaderCreative updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
                             <Route path={'/whatcreative'} component={WhatCreative} />
+                            <Route path={'/agent'} component={AgentHome} />
                         </Switch>
                     </section>
                 </CSSTransition>
