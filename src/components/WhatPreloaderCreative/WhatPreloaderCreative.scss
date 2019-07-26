@@ -1,0 +1,55 @@
+@import "../../scss/vars";
+
+.ForWhoPreloader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    height: 65px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 3;
+
+    &_anim {
+      height: 50px;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 43px;
+      color: $color-black;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      display: block;
+    }
+  }
+
+  &__desc {
+    &_wr {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    &_item {
+      text-transform: uppercase;
+      font-size: 26px;
+      font-weight: 600;
+      color: $color-red-etl;
+      height: 30px;
+      overflow: hidden;
+      z-index: 3;
+
+      &_text {
+        display: block;
+      }
+
+      &:nth-child(2n) {
+        margin-left: 83px;
+        margin-right: 57px;
+      }
+    }
+  }
+}

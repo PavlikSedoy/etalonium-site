@@ -180,8 +180,16 @@ class Header extends Component {
                                                 <div className="For-who__numbering">01</div>
                                             </li>
                                             <li className="For-who__item">
-                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Fashion maker</a>
-                                                <div className="For-who__grayed">Fashion maker</div>
+                                                <Link
+                                                    to='/creative'
+                                                    className="For-who__word"
+                                                    onMouseEnter={this.hoverForWhoItemHandler}
+                                                    onMouseLeave={this.hoverForWhoExitItemHandler}
+                                                    onClick={this.closeMenuOnClickLink}
+                                                >
+                                                    Creative
+                                                </Link>
+                                                <div className="For-who__grayed">Creative</div>
                                                 <div className="For-who__numbering">02</div>
                                             </li>
                                             <li className="For-who__item">

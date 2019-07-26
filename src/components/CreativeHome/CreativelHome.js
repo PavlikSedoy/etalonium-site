@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './ModelHome.scss'
+import './CreativeHome.scss'
 
 import { Redirect, NavLink } from "react-router-dom";
 
@@ -8,7 +8,7 @@ import Pagination from "../Pagination/Pagination";
 import Scroll from "../Scroll/Scroll";
 
 
-class ModelHome extends Component {
+class CreativeHome extends Component {
     state = {
         redirect: false,
         mouseWheelDirection: ''
@@ -36,24 +36,24 @@ class ModelHome extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect && this.state.mouseWheelDirection === 'down') {
-            return <Redirect to='/whatpreloadermodel' />
+            return <Redirect to='/whatpreloadercreative' />
         }
     }
 
     render() {
         return (
-            <main className="Home__main ModelHome__main" onWheel = {(e) => this.wheel(e)}>
-                <div className="ModelHome__bg"></div>
+            <main className="Home__main CreativeHome__main" onWheel = {(e) => this.wheel(e)}>
+                <div className="CreativeHome__bg"></div>
                 {this.renderRedirect()}
                 <Social white={true} />
-                <Pagination activePage={1} white={true} page={'model'} />
-                <Scroll page="whatpreloadermodel" white={true} />
+                <Pagination activePage={1} white={true} page={'creative'} />
+                <Scroll page="whatpreloadercreative" white={true} />
                 <div className="Home HomeRoules">
-                    <h1 className="HomeRoules__title">Start your  way to success</h1>
+                    <h1 className="HomeRoules__title">Make dream profitable</h1>
                 </div>
             </main>
         )
     }
 }
 
-export default ModelHome
+export default CreativeHome

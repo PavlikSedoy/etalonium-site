@@ -7,11 +7,16 @@ import WhatPreloader from "./components/WhatPreloader/WhatPreloader";
 import What from "./components/What/What";
 import WhoPreloader from "./components/WhoPreloader/WhoPreloader";
 import Who from "./components/Who/Who";
+
+// Models Pages
+import ModelHome from './components/ModelHome/ModelHome'
 import WhatPreloaderModel from './components/WhatPreloaderModel/WhatPreloaderModel'
 import WhatModel from './components/WhatModel/WhatModel'
 
-// Models Page
-import ModelHome from './components/ModelHome/ModelHome'
+// Creative Pages
+import CreativeHome from './components/CreativeHome/CreativelHome'
+import WhatPreloaderCreative from './components/WhatPreloaderCreative/WhatPreloaderCreative'
+import WhatCreative from './components/WhatCreative/WhatCreative'
 
 
 class Container extends Component {
@@ -19,6 +24,7 @@ class Container extends Component {
     state = {
         whatRedirect: false,
         whatModelRedirect: false,
+        whatCreativeRedirect: false,
         whoRedirect: false,
         whoItems: [
             {
@@ -73,6 +79,12 @@ class Container extends Component {
         })
     }
 
+    updateWhatCreativeRedirect = () => {
+        this.setState({
+            whatCreativeRedirect: !this.state.whatCreativeRedirect
+        })
+    }
+
     render() {
         const { location } = this.props
 
@@ -95,6 +107,9 @@ class Container extends Component {
                             <Route path={'/model'} component={ModelHome} />
                             <Route path={'/whatpreloadermodel'} component={() => <WhatPreloaderModel updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
                             <Route path={'/whatmodel'} component={WhatModel} />
+                            <Route path={'/creative'} component={CreativeHome} />
+                            <Route path={'/whatpreloadercreative'} component={() => <WhatPreloaderCreative updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
+                            <Route path={'/whatcreative'} component={WhatCreative} />
                         </Switch>
                     </section>
                 </CSSTransition>

@@ -116,7 +116,7 @@ class What extends Component {
             <main className="What" onWheel = {(e) => this.wheel(e)}>
                 {this.renderRedirect()}
                 <Social/>
-                <Pagination activePage={2}/>
+                <Pagination activePage={2} page="model"/>
                 <Scroll page="whopreloadermodel"/>
                 <div className="What__left-side What__left-side-roules">
                     <div className="What__container">
