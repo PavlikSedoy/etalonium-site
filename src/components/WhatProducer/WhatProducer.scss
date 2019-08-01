@@ -1,0 +1,212 @@
+@import "../../scss/vars";
+
+.What {
+  display: flex;
+
+  &__left-side {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__right-side {
+    flex-basis: 50%;
+    background-image: url('../../img/ForWho/Mask Group.jpg');
+    background-size: cover;
+  }
+
+  // Sides for Roule pages
+  &__left-side-roules {
+    flex-basis: 70%;
+
+    & .What__container {
+      max-width: 760px;
+      margin-left: 115px;
+    }
+  }
+
+  &__right-side-roules {
+    background: none;
+    display: flex;
+    align-items: center;
+  }
+
+  //  Container
+  &__container {
+    max-width: 480px;
+    margin: auto;
+    height: 455px;
+  }
+
+  //  Title
+  &__title {
+    margin-bottom: 35px;
+    height: 45px;
+    overflow: hidden;
+
+    h1 {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 43px;
+      margin: 0;
+      display: block;
+      height: 45px;
+    }
+  }
+
+  //  Item
+  &__item {
+    transition: height .3s ease-in-out;
+    margin-top: 15px;
+
+    &_title-img {
+      svg {
+        path {
+          transition: fill .6s ease-in-out;
+        }
+      }
+    }
+
+    &_title-img.active {
+      svg {
+        path {
+          fill: $color-red-etl;
+        }
+      }
+    }
+
+    &_title-arrow {
+      margin-left: 20px;
+      //transition: transform .3s ease-in-out;
+      transition: transform .6s cubic-bezier(0.080, 1.090, 0.320, 1.275);
+      svg {
+        path {
+          transition: fill .6s ease-in-out;
+        }
+      }
+      &.active {
+        transform: rotate(180deg);
+        svg {
+          path {
+            fill: $color-red-etl;
+          }
+        }
+      }
+    }
+
+    &.active {
+      .What__item_text {
+        opacity: 1;
+        height: 150px;
+        transition: .5s ease-in-out;
+      }
+    }
+    &.disable {
+      .What__item_text {
+        opacity: 0;
+        height: 0;
+        transition: .5s ease-in-out;
+      }
+    }
+  }
+
+  &__item-title {
+    color: $color-red-etl;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    //margin-bottom: 0;
+    transition: color .6s ease-in-out;
+    margin: 0;
+    margin-top: 4px;
+
+    &_wr {
+      margin-left: 30px;
+    }
+
+    &.disactive {
+      color: $color-gray;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__item_text {
+    color: rgb(92, 92, 92);
+    line-height: 1.76;
+    overflow: hidden;
+    height: 150px;
+    position: relative;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: opacity .3s ease-in-out, height .3s ease-in-out;
+    opacity: 0;
+
+    &__content {
+      height: auto;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      background-color: $color-red-etl;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item_header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__roule-mockup {
+    &_img {
+      max-height: 720px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .what-enter {
+    height: 0px;
+
+    &:after {
+      height: 150px;
+      transform: translateY(0px);
+    }
+  }
+
+  .what-enter.what-enter-active {
+    transition: height .3s ease-in-out .4s;
+    height: 150px;
+    width: 480px;
+
+    &:after {
+      height: 150px;
+      transition: transform .2s ease-in-out .7s;
+      transform: translateY(150px);
+    }
+  }
+
+  .what-leave {
+    height: 100px;
+  }
+
+  .what-leave.what-leave-active {
+    height: 0;
+    width: 480px;
+    transition: height .4s ease-in-out;
+  }
+}

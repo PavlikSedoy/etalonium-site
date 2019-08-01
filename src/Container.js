@@ -23,6 +23,11 @@ import AgentHome from './components/AgentHome/AgentHome'
 import WhatPreloaderAgent from './components/WhatPreloaderAgent/WhatPreloaderAgent'
 import WhatAgent from './components/WhatAgent/WhatAgent'
 
+// Producer Pages
+import PropducerHome from './components/ProducerHome/ProducerHome'
+import WhatPreloaderProducer from './components/WhatPreloaderProducer/WhatPreloaderProducer'
+import WhatProducer from './components/WhatProducer/WhatProducer'
+
 
 class Container extends Component {
 
@@ -118,6 +123,9 @@ class Container extends Component {
                             <Route path={'/agent'} component={AgentHome} />
                             <Route path={'/whatpreloaderagent'} component={() => <WhatPreloaderAgent updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
                             <Route path={'/whatagent'} component={WhatAgent} />
+                            <Route path={'/producer'} component={PropducerHome} />
+                            <Route path={'/whatpreloaderproducer'} component={() => <WhatPreloaderProducer updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
+                            <Route path={'/whatproducer'} component={WhatProducer} />
                         </Switch>
                     </section>
                 </CSSTransition>

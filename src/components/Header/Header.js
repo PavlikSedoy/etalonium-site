@@ -206,7 +206,15 @@ class Header extends Component {
                                                 <div className="For-who__numbering">03</div>
                                             </li>
                                             <li className="For-who__item">
-                                                <a className="For-who__word" href="/" onMouseEnter={this.hoverForWhoItemHandler} onMouseLeave={this.hoverForWhoExitItemHandler}>Producer</a>
+                                                <Link
+                                                    to="/producer"
+                                                    className="For-who__word"
+                                                    onMouseEnter={this.hoverForWhoItemHandler}
+                                                    onMouseLeave={this.hoverForWhoExitItemHandler}
+                                                    onClick={this.closeMenuOnClickLink}
+                                                >
+                                                    Producer
+                                                </Link>
                                                 <div className="For-who__grayed">Producer</div>
                                                 <div className="For-who__numbering">04</div>
                                             </li>
