@@ -86,6 +86,17 @@ main {
     }
   }
 
+  .ModelHome__bg, .CreativeHome__bg, .AgentHome__bg, .ProducerHome__bg {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .5s ease-in-out 2.4s;
+  }
+
+  .HomeRoules__title {
+    opacity: 0;
+    transition: .5s ease-in-out 2.7s;
+  }
+
   //  WhtarPreloader Enter
   .ForWhoPreloader__title_anim {
     transform: translateY(50px);
@@ -182,6 +193,15 @@ main {
     }
   }
 
+  .ModelHome__bg, .CreativeHome__bg, .AgentHome__bg, .ProducerHome__bg {
+    opacity: 1;
+    transform: translateX(0)
+  }
+
+  .HomeRoules__title {
+    opacity: 1;
+  }
+
   //  WhtarPreloader Enter
   .ForWhoPreloader__title_anim {
     transform: translateY(0);
@@ -252,6 +272,17 @@ main {
     width: 0;
   }
 
+  .ModelHome__bg, .CreativeHome__bg, .AgentHome__bg, .ProducerHome__bg {
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s ease-in-out .4s;
+  }
+
+  .HomeRoules__title {
+    opacity: 1;
+    transition: .3s ease-in-out;
+  }
+
   //  WhtarPreloader Exit
   .ForWhoPreloader__title_anim {
     transform: translateY(0);
@@ -299,6 +330,12 @@ main {
     transform: translateY(0px);
     opacity: 1;
     transition: .5s ease-in-out;
+  }
+
+  .What__roule-mockups {
+    opacity: 1;
+    transform: translateX(0);
+    transition: .5s ease-in-out .5s;
   }
 
   //  WhoPreloader Exit
@@ -359,6 +396,15 @@ main {
     transform: translateY(-500px);
   }
 
+  .ModelHome__bg, .CreativeHome__bg, .AgentHome__bg, .ProducerHome__bg {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  .HomeRoules__title {
+    opacity: 0;
+  }
+
   //  WhtarPreloader Exit
   .ForWhoPreloader__title_anim {
     transform: translateY(-50px);
@@ -386,6 +432,12 @@ main {
   .What__content {
     transform: translateY(100px);
     opacity: 0;
+  }
+
+  .What__roule-mockups {
+    opacity: 0;
+    transform: translateX(200px);
+    // transition: transform .5s;
   }
 
   //  WhoPreloader Exit

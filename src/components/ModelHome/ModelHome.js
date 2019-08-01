@@ -6,6 +6,7 @@ import { Redirect, NavLink } from "react-router-dom";
 import Social from "../Social/Social";
 import Pagination from "../Pagination/Pagination";
 import Scroll from "../Scroll/Scroll";
+import BgTextEtal from "../BgTextEtal/BgTextEtal"
 
 
 class ModelHome extends Component {
@@ -45,6 +46,7 @@ class ModelHome extends Component {
             <main className="Home__main ModelHome__main" onWheel = {(e) => this.wheel(e)}>
                 <div className="ModelHome__bg"></div>
                 {this.renderRedirect()}
+                <BgTextEtal />
                 <Social white={true} />
                 <Pagination activePage={1} white={true} page={'model'} />
                 <Scroll page="whatpreloadermodel" white={true} />

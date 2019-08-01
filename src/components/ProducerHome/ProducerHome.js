@@ -6,6 +6,7 @@ import { Redirect, NavLink } from "react-router-dom";
 import Social from "../Social/Social";
 import Pagination from "../Pagination/Pagination";
 import Scroll from "../Scroll/Scroll";
+import BgTextEtal from "../BgTextEtal/BgTextEtal"
 
 
 class AgentHome extends Component {
@@ -45,8 +46,9 @@ class AgentHome extends Component {
             <main className="Home__main ProducerHome__main" onWheel = {(e) => this.wheel(e)}>
                 <div className="ProducerHome__bg"></div>
                 {this.renderRedirect()}
+                <BgTextEtal />
                 <Social white={true} />
-                <Pagination activePage={1} white={true} page={'agent'} />
+                <Pagination activePage={1} white={true} page={'producer'} />
                 <Scroll page="whatpreloaderproducer" white={true} />
                 <div className="Home HomeRoules">
                     <h1 className="HomeRoules__title">Spend more time on work than on searching</h1>

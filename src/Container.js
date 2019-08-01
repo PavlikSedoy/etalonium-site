@@ -12,6 +12,8 @@ import Who from "./components/Who/Who";
 import ModelHome from './components/ModelHome/ModelHome'
 import WhatPreloaderModel from './components/WhatPreloaderModel/WhatPreloaderModel'
 import WhatModel from './components/WhatModel/WhatModel'
+import WhoPreloaderModel from "./components/WhoPreloaderModel/WhoPreloaderModel"
+import WhoModel from "./components/WhoModel/WhoModel"
 
 // Creative Pages
 import CreativeHome from './components/CreativeHome/CreativelHome'
@@ -35,6 +37,8 @@ class Container extends Component {
         whatRedirect: false,
         whatModelRedirect: false,
         whatCreativeRedirect: false,
+        whatAgentRedirect: false,
+        whatProducertRedirect: false,
         whoRedirect: false,
         whoItems: [
             {
@@ -95,6 +99,18 @@ class Container extends Component {
         })
     }
 
+    updateWhatAgentRedirect = () => {
+        this.setState({
+            whatAgentRedirect: !this.state.whatAgentRedirect
+        })
+    }
+
+    updateWhatProducerRedirect = () => {
+        this.setState({
+            whatProducerRedirect: !this.state.whatProducerRedirect
+        })
+    }
+
     render() {
         const { location } = this.props
 
@@ -118,14 +134,16 @@ class Container extends Component {
                             <Route path={'/whatpreloadermodel'} component={() => <WhatPreloaderModel updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
                             <Route path={'/whatmodel'} component={WhatModel} />
                             <Route path={'/creative'} component={CreativeHome} />
-                            <Route path={'/whatpreloadercreative'} component={() => <WhatPreloaderCreative updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
+                            <Route path={'/whatpreloadercreative'} component={() => <WhatPreloaderCreative updateRedirect={this.updateWhatCreativeRedirect} redirect={this.state.whatCreativeRedirect} timeOut={7000} /> } />
                             <Route path={'/whatcreative'} component={WhatCreative} />
                             <Route path={'/agent'} component={AgentHome} />
-                            <Route path={'/whatpreloaderagent'} component={() => <WhatPreloaderAgent updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
+                            <Route path={'/whatpreloaderagent'} component={() => <WhatPreloaderAgent updateRedirect={this.updateWhatAgentRedirect} redirect={this.state.whatAgentRedirect} timeOut={7000} /> } />
                             <Route path={'/whatagent'} component={WhatAgent} />
                             <Route path={'/producer'} component={PropducerHome} />
-                            <Route path={'/whatpreloaderproducer'} component={() => <WhatPreloaderProducer updateRedirect={this.updateWhatModelRedirect} redirect={this.state.whatModelRedirect} timeOut={7000} /> } />
+                            <Route path={'/whatpreloaderproducer'} component={() => <WhatPreloaderProducer updateRedirect={this.updateWhatProducerRedirect} redirect={this.state.whatProducerRedirect} timeOut={7000} /> } />
                             <Route path={'/whatproducer'} component={WhatProducer} />
+                            <Route path={'/whopreloadermodel'} component={WhoPreloaderModel} />
+                            <Route path={'/whomodel'} component={WhoModel} />
                         </Switch>
                     </section>
                 </CSSTransition>
