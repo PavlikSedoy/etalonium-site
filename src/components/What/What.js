@@ -3,7 +3,8 @@ import { Redirect } from 'react-router-dom'
 import './What.scss'
 import Social from "../Social/Social";
 import Pagination from "../Pagination/Pagination";
-import Scroll from "../Scroll/Scroll";
+
+import video from '../../video/what.mp4'
 
 // import { CSSTransition } from 'react-transition-group'
 
@@ -87,10 +88,9 @@ class What extends Component {
         return (
             <main className="What" onWheel = {(e) => this.wheel(e)}>
                 {this.renderRedirect()}
-                <Social/>
-                <Pagination activePage={2}/>
-                {/*<Scroll page="whopreloader"/>*/}
                 <div className="What__left-side">
+                <Social/>
+                {/*<Scroll page="whopreloader"/>*/}
                     <div className="What__container">
                         <div className="What__title">
                             <h1>Preference:</h1>
@@ -136,7 +136,12 @@ class What extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="What__right-side"></div>
+                <div className="What__right-side">
+                    <Pagination activePage={2}/>
+                    <div className="What__video-wr">
+                        <video src={video} autoPlay muted loop className="What__video" />
+                    </div>
+                </div>
             </main>
         );
     }

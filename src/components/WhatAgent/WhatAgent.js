@@ -131,7 +131,7 @@ class What extends Component {
     }
 
     renderRedirect = () => {
-        if ( this.state.redirect && this.state.mouseWheelDirection === 'down' ) return <Redirect to='/whopreloadercragent' />
+        if ( this.state.redirect && this.state.mouseWheelDirection === 'down' ) return <Redirect to='/whopreloaderagent' />
         else if ( this.state.redirect && this.state.mouseWheelDirection === 'up' ) return <Redirect to='/agent' />
     }
     

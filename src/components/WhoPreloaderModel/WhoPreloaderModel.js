@@ -33,7 +33,7 @@ class WhoPreloader extends Component {
                 {this.renderRedirect()}
                 <BgTextEtal/>
                 <div className="ForWhoPreloader__title who">
-                    <h1>Get access to the largest base of photographers, designers and agencies from around the world!</h1>
+                    <h1>Support talents, invest in fashion development.</h1>
                 </div>
             </main>
         )

@@ -19,16 +19,22 @@ import WhoModel from "./components/WhoModel/WhoModel"
 import CreativeHome from './components/CreativeHome/CreativelHome'
 import WhatPreloaderCreative from './components/WhatPreloaderCreative/WhatPreloaderCreative'
 import WhatCreative from './components/WhatCreative/WhatCreative'
+import WhoPreloaderCreative from "./components/WhoPreloaderCreative/WhoPreloaderCreative"
+import WhoCreative from "./components/WhoCreative/WhoCreative"
 
 // Agent Pages
 import AgentHome from './components/AgentHome/AgentHome'
 import WhatPreloaderAgent from './components/WhatPreloaderAgent/WhatPreloaderAgent'
 import WhatAgent from './components/WhatAgent/WhatAgent'
+import WhoPreloaderAgent from "./components/WhoPreloaderAgent/WhoPreloaderAgent"
+import WhoAgent from "./components/WhoAgent/WhoAgent"
 
 // Producer Pages
 import PropducerHome from './components/ProducerHome/ProducerHome'
 import WhatPreloaderProducer from './components/WhatPreloaderProducer/WhatPreloaderProducer'
 import WhatProducer from './components/WhatProducer/WhatProducer'
+import WhoPreloaderProducer from "./components/WhoPreloaderProducer/WhoPreloaderProducer"
+import WhoProducer from "./components/WhoProducer/WhoProducer"
 
 
 class Container extends Component {
@@ -144,6 +150,12 @@ class Container extends Component {
                             <Route path={'/whatproducer'} component={WhatProducer} />
                             <Route path={'/whopreloadermodel'} component={WhoPreloaderModel} />
                             <Route path={'/whomodel'} component={WhoModel} />
+                            <Route path={'/whopreloadercreative'} component={WhoPreloaderCreative} />
+                            <Route path={'/whocreative'} component={WhoCreative} />
+                            <Route path={'/whopreloaderagent'} component={WhoPreloaderAgent} />
+                            <Route path={'/whoagent'} component={WhoAgent} />
+                            <Route path={'/whopreloaderproducer'} component={WhoPreloaderProducer} />
+                            <Route path={'/whoproducer'} component={WhoProducer} />
                         </Switch>
                     </section>
                 </CSSTransition>

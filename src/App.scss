@@ -161,6 +161,25 @@ main {
     opacity: 0;
     transition: .1s ease-in-out 1.9s;
   }
+
+  // Contact page
+  .Who__email {
+    opacity: 0;
+    transform: translate(-50% ,50px);
+    transition: .5s ease-in-out 2.7s;
+  }
+
+  .Who__contact-us {
+    opacity: 0;
+    transform: translateX(100px) rotate(-90deg);
+    transition: .5s ease-in-out 2.7s;
+  }
+
+  .Who__map {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: .5s ease-in-out 2.3s;
+  }
 }
 
 .fade-enter-active {
@@ -242,6 +261,22 @@ main {
   //  Etalonium BG Text
   .BgTextEtal {
     opacity: 1;
+  }
+
+  // Contact page
+  .Who__email {
+    opacity: 1;
+    transform: translate(-50% ,0);
+  }
+
+  .Who__contact-us {
+    opacity: 1;
+    transform: translateX(0) rotate(-90deg);
+  }
+
+  .Who__map {
+    opacity: .3;
+    transform: translateX(0);
   }
 }
 
@@ -385,6 +420,25 @@ main {
     opacity: 1;
     transition: .1s ease-in-out 1.8s;
   }
+
+   // Contact page
+   .Who__email {
+    opacity: 1;
+    transform: translate(-50% ,0);
+    transition: .3s ease-in-out .6s;
+  }
+
+  .Who__contact-us {
+    opacity: 1;
+    transform: translateX(0) rotate(-90deg);
+    transition: .3s ease-in-out .6s;
+  }
+
+  .Who__map {
+    opacity: .3;
+    transform: translateX(0);
+    transition: .5s ease-in-out .9s;
+  }
 }
 
 .fade-exit-active {
@@ -476,6 +530,22 @@ main {
   //  Etalonium BG Text
   .BgTextEtal {
     opacity: 0;
+  }
+
+  // Contact page
+  .Who__email {
+    opacity: 0;
+    transform: translate(-50% ,50px);
+  }
+
+  .Who__contact-us {
+    opacity: 0;
+    transform: translateX(100px) rotate(-90deg);
+  }
+
+  .Who__map {
+    opacity: 0;
+    transform: translateX(-100%);
   }
 }
 
