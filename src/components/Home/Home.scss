@@ -120,3 +120,18 @@
     }
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .Home {
+    &__phone-img_wr {
+      width: 300px;
+      bottom: -100px;
+      right: -40px;
+    }
+
+    &__phone-gif {
+      width: 114%;
+      right: -23px;
+    }
+  }
+}

@@ -139,6 +139,12 @@ main {
     transition: .5s ease-in-out 2.7s;
   }
 
+  .What__roule-mockups {
+    opacity: 0;
+    transform: translateX(200px);
+    transition: .5s ease-in-out 2.7s;
+  }
+
   //  WhoPreloader Enter
   .ForWhoPreloader.who {
     width: 0;
@@ -242,6 +248,11 @@ main {
   .What__content {
     transform: translateY(0);
     opacity: 1;
+  }
+
+  .What__roule-mockups {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   //  WhoPreloader Enter

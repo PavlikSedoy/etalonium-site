@@ -85,6 +85,7 @@ class Who extends Component {
                     shadow="../../img/who/model-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
+                    link="model"
                 >
                     Use Etalonium for career growth, find and communicate with lead photographers, designers and agents from around the world, share your success in the news feed and inspire millions of beginner models by your example.
                 </WhoItem>
@@ -98,6 +99,7 @@ class Who extends Component {
                     shadow="../../img/who/fashionmaker-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
+                    link="creative"
                 >
                     Your talent as a fashion designer, photographer, stylist or makeup artist will be appreciated by customers from all around the world, so follow your dream, sell your services and demonstrate your creativity to the whole world.
                 </WhoItem>
@@ -111,6 +113,7 @@ class Who extends Component {
                     shadow="../../img/who/agent-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
+                    link="agent"
                 >
                     Find beginner Models and fashion makers, become an agent who supports at the start, creates a star and gets a percentage of successful orders. Your contacts in real life, taste and experience, will help you consistently make money.
                 </WhoItem>
@@ -124,6 +127,7 @@ class Who extends Component {
                     shadow="../../img/who/producer-shadow.png"
                     onMouseEnter={this.mouseHoverItem.bind(this)}
                     onMouseLeave={this.mouseOverItem.bind(this)}
+                    link="producer"
                 >
                     If you have a dollar - you are a Producer(you can be a producer). Support and invest in growing models, getting a percentage of completed orders and a constantly growing asset in the form of a token.
                 </WhoItem>

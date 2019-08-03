@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 
 import arrow from '../../img/Arrow-2.svg'
 
@@ -24,7 +25,7 @@ class WhoItem extends Component {
                         <div className="Who__content_more-info-in">
                             <div className="hover-bg__bg bg-white"></div>
                             <img src={arrow} alt="" className="Who__content_more-info_img"/>
-                            <a href="/" className="Who__content_more-info_link">More info</a>
+                            <Link to={this.props.link} className="Who__content_more-info_link">More info</Link>
                         </div>
                     </div>
                 </div>

@@ -207,3 +207,16 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .What {
+    &__right-side-roules {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__roule-mockup_img {
+      max-height: 590px !important;
+    }
+  }
+}
